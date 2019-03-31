@@ -22,7 +22,8 @@
 
         <activity
             android:name=".AboutActivity"
-            android:label="About">
+            android:label="About"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
     </application>
 

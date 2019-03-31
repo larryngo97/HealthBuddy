@@ -43,15 +43,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -132,22 +123,22 @@ public class MainActivity extends AppCompatActivity
         switch(id)
         {
             case R.id.nav_exercises:
-                Toast.makeText(MainActivity.this, "Clicked exercises!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Clicked exercises!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_nutrition:
-                Toast.makeText(MainActivity.this, "Clicked nutrition!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Clicked nutrition!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_achievements:
-                Toast.makeText(MainActivity.this, "Clicked achievements!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Clicked achievements!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_schedule:
-                Toast.makeText(MainActivity.this, "Clicked schedule!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_settings:
-                Toast.makeText(MainActivity.this, "Clicked schedule!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
-                intent = new Intent(MainActivity.this, AboutActivity.class);
+                intent = new Intent(getApplicationContext(), AboutActivity.class);
                 startActivity(intent);
                 break;
             default:
