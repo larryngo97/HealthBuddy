@@ -46,7 +46,7 @@ public class MainActivity extends DrawerActivity
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        Toast.makeText(MainActivity.this, "Clicked: " + id, Toast.LENGTH_SHORT).show();
+        Intent intent;
 
         switch(id)
         {
@@ -54,7 +54,8 @@ public class MainActivity extends DrawerActivity
                 Toast.makeText(MainActivity.this, "Clicked profile!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.main_cv_exercises:
-                Toast.makeText(MainActivity.this, "Clicked exercises!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
+                startActivity(intent);
                 break;
             case R.id.main_cv_nutrition:
                 Toast.makeText(MainActivity.this, "Clicked nutrition!", Toast.LENGTH_SHORT).show();
@@ -81,6 +82,7 @@ public class MainActivity extends DrawerActivity
         }
     }
 
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -102,6 +104,7 @@ public class MainActivity extends DrawerActivity
 
         return super.onOptionsItemSelected(item);
     }
+    */
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
