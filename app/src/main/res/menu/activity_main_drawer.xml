@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_exercises"
+            android:icon="@drawable/ic_nav_exercises"
+            android:title="Exercises" />
+        <item
+            android:id="@+id/nav_nutrition"
+            android:icon="@drawable/ic_nav_nutrition"
+            android:title="Nutrition" />
+        <item
+            android:id="@+id/nav_achievements"
+            android:icon="@drawable/ic_nav_achievements"
+            android:title="Achievements" />
+        <item
+            android:id="@+id/nav_schedule"
+            android:icon="@drawable/ic_nav_schedule"
+            android:title="Schedule" />
+    </group>
+
+    <item android:title="Misc">
+        <menu>
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Settings" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_group_black_24dp"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>
