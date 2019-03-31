@@ -55,7 +55,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/ic_circle_yellow"
-                        android:src="@drawable/ic_account_circle_black_24dp"
+                        android:src="@drawable/ic_account_circle_white_24dp"
                         android:padding="10dp"/>
 
                     <View
@@ -111,7 +111,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/ic_circle_purple"
-                        android:src="@drawable/ic_fitness_center_black_24dp"
+                        android:src="@drawable/ic_fitness_center_white_24dp"
                         android:padding="10dp"/>
 
                     <View
@@ -158,7 +158,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/ic_circle_green"
-                        android:src="@drawable/ic_accessibility_black_24dp"
+                        android:src="@drawable/ic_accessibility_white_24dp"
                         android:padding="10dp"/>
 
                     <View
@@ -213,7 +213,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/ic_circle_navyblue"
-                        android:src="@drawable/ic_star_black_24dp"
+                        android:src="@drawable/ic_star_white_24dp"
                         android:padding="10dp"/>
 
                     <View
@@ -260,7 +260,7 @@
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/ic_circle_pink"
-                        android:src="@drawable/ic_event_black_24dp"
+                        android:src="@drawable/ic_event_white_24dp"
                         android:padding="10dp"/>
 
                     <View
