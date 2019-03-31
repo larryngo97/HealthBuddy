@@ -45,13 +45,13 @@ public class DrawerActivity extends AppCompatActivity
         Intent intent;
         int id = item.getItemId();
 
-        switch(id)
+        switch(id) //default choices. Replace them in actual activities
         {
             case R.id.nav_home:
+                Toast.makeText(getApplicationContext(), "Clicked home!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_exercises:
-                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Clicked exercises!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_nutrition:
                 Toast.makeText(getApplicationContext(), "Clicked nutrition!", Toast.LENGTH_SHORT).show();
@@ -66,8 +66,7 @@ public class DrawerActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
-                intent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Clicked about!", Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;

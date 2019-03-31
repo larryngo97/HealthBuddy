@@ -103,7 +103,6 @@ public class MainActivity extends DrawerActivity
         // Handle navigation view item clicks here.
         Intent intent;
         int id = item.getItemId();
-
         switch(id)
         {
             case R.id.nav_home:
