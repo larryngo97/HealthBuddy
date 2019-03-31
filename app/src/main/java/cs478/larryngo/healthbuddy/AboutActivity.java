@@ -67,6 +67,10 @@ public class AboutActivity extends AppCompatActivity implements NavigationView.O
 
         switch(id)
         {
+            case R.id.nav_home:
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                break;
             case R.id.nav_exercises:
                 Toast.makeText(getApplicationContext(), "Clicked exercises!", Toast.LENGTH_SHORT).show();
                 break;
@@ -83,8 +87,6 @@ public class AboutActivity extends AppCompatActivity implements NavigationView.O
                 Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
-                intent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(intent);
                 break;
             default:
                 break;

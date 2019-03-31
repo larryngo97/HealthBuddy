@@ -122,6 +122,8 @@ public class MainActivity extends AppCompatActivity
 
         switch(id)
         {
+            case R.id.nav_home:
+                break;
             case R.id.nav_exercises:
                 Toast.makeText(getApplicationContext(), "Clicked exercises!", Toast.LENGTH_SHORT).show();
                 break;
