@@ -49,7 +49,7 @@ public class MainActivity extends DrawerActivity
                 Toast.makeText(MainActivity.this, "Clicked profile!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.main_cv_exercises:
-                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
+                intent = new Intent(getApplicationContext(), ExercisesViewActivity.class);
                 startActivity(intent);
                 break;
             case R.id.main_cv_nutrition:
