@@ -8,11 +8,14 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
 public class DrawerActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener{
+
+    private final String TAG = "Navigation Drawer";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,5 +89,35 @@ public class DrawerActivity extends AppCompatActivity
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i(TAG, "++ ON START ++");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i(TAG, "++ ON RESUME ++");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(TAG, "++ ON PAUSE ++");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(TAG, "++ ON STOP ++");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(TAG, "++ ON DESTROY ++");
+        super.onDestroy();
     }
 }

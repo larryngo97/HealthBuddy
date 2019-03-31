@@ -2,24 +2,19 @@ package cs478.larryngo.healthbuddy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends DrawerActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
+    private final String TAG = "Home";
     private CardView cv_profile, cv_exercises, cv_nutrition, cv_achievements, cv_schedule;
 
     @Override
@@ -72,6 +67,13 @@ public class MainActivity extends DrawerActivity
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(Intent.ACTION_MAIN); //starts up intent
+        intent.addCategory(Intent.CATEGORY_HOME); //makes the app go to home
+        startActivity(intent); //starts the intent
+    }
 
     /*
     @Override
@@ -130,10 +132,38 @@ public class MainActivity extends DrawerActivity
             default:
                 break;
         }
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i(TAG, "++ ON START ++");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i(TAG, "++ ON RESUME ++");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(TAG, "++ ON PAUSE ++");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(TAG, "++ ON STOP ++");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(TAG, "++ ON DESTROY ++");
+        super.onDestroy();
     }
 }

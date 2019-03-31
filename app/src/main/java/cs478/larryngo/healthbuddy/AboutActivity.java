@@ -2,21 +2,18 @@ package cs478.larryngo.healthbuddy;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class AboutActivity extends DrawerActivity implements NavigationView.OnNavigationItemSelectedListener{
+
+    private final String TAG = "About";
     private DrawerLayout drawerLayout;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -76,5 +73,35 @@ public class AboutActivity extends DrawerActivity implements NavigationView.OnNa
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i(TAG, "++ ON START ++");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i(TAG, "++ ON RESUME ++");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(TAG, "++ ON PAUSE ++");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(TAG, "++ ON STOP ++");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(TAG, "++ ON DESTROY ++");
+        super.onDestroy();
     }
 }
