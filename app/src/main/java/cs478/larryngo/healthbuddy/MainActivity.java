@@ -17,7 +17,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends DrawerActivity
         implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
 
     private CardView cv_profile, cv_exercises, cv_nutrition, cv_achievements, cv_schedule;
@@ -39,18 +39,8 @@ public class MainActivity extends AppCompatActivity
         cv_exercises.setOnClickListener(this);
         cv_nutrition.setOnClickListener(this);
         cv_achievements.setOnClickListener(this);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        cv_schedule.setOnClickListener(this);
+        
     }
 
     @Override
@@ -125,7 +115,8 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_home:
                 break;
             case R.id.nav_exercises:
-                Toast.makeText(getApplicationContext(), "Clicked exercises!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_nutrition:
                 Toast.makeText(getApplicationContext(), "Clicked nutrition!", Toast.LENGTH_SHORT).show();
