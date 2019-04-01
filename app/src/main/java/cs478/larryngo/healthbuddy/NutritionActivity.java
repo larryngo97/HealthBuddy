@@ -17,10 +17,11 @@ public class NutritionActivity extends DrawerActivity{
     private final String TAG = "Nutrition";
     private TextView tv_meter_subtitle;
     private TextView tv_meter_reading;
-    private String text_meter_subtitle = "Daily calories: CALORIES # / 2000";
+    private int caloriesCount = 0;
+    private float dailyCalories = 2000;
+    private String text_meter_subtitle = "Daily calories:\n" + caloriesCount + " / " + (int)dailyCalories;
 
     private ProgressBar iv_meter;
-    private float dailyCalories = 2000;
     private float percentage = 80.0f;
     private String percentageString;
 
@@ -44,9 +45,14 @@ public class NutritionActivity extends DrawerActivity{
                 float rn = rand.nextInt(3001);
 
                 percentage = (rn / dailyCalories) * 100;
+
+                caloriesCount = (int)rn;
+                text_meter_subtitle = "Daily calories:\n" + caloriesCount + " / " + (int)dailyCalories;
+                tv_meter_subtitle.setText(text_meter_subtitle);
+
                 Log.i(TAG, "Percentage: " + percentage);
                 percentageString = String.format(Locale.US, "%.2f", percentage) + "%";
-                
+
                 if(percentage > 100.0)
                 {
                     tv_meter_reading.setTextSize(28);
