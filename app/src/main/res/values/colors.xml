@@ -15,4 +15,5 @@
     <color name="color_lightpink">#f67da7</color>
     <color name="color_lightblue">#12c7e3</color>
     <color name="color_lightgreen">#0abf53</color>
+    <color name="color_white">#fff</color>
 </resources>
