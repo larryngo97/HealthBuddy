@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ExercisesInfoActivity extends AppCompatActivity {
+public class ExercisesInfoActivity extends DrawerActivity {
 
     private final String TAG = "Exercises Info";
     private ImageView iv_exercise;

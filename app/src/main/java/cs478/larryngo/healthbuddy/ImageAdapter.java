@@ -23,6 +23,11 @@ public class ImageAdapter extends BaseAdapter {
         this.icons = icons;
     }
 
+    public ImageAdapter(Context c, ArrayList<Integer> icons) {
+        this.mContext = c;
+        this.icons = icons;
+    }
+
     public int getCount() {
         return icons.size();
     }
@@ -41,11 +46,11 @@ public class ImageAdapter extends BaseAdapter {
         View gridView = convertView;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE); //grabs inflate info
-            gridView = inflater.inflate(R.layout.gridview_exercises, null); //inflates the grid
+            gridView = inflater.inflate(R.layout.gridview_layout, null); //inflates the grid
 
         }
-        ImageView iconView = gridView.findViewById(R.id.gv_exercise_image);
-        TextView nameView = gridView.findViewById(R.id.gv_exercise_name);
+        ImageView iconView = gridView.findViewById(R.id.gv_item_image);
+        TextView nameView = gridView.findViewById(R.id.gv_item_name);
 
         iconView.setImageResource(icons.get(position)); //sets the picture
         nameView.setText(name.get(position)); //displays the name of the phone to the grid

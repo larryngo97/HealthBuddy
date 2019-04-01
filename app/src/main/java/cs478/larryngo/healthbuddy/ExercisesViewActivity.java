@@ -147,7 +147,7 @@ public class ExercisesViewActivity extends DrawerActivity {
                 default:
                     break;
             }
-            gv = (GridView)findViewById(R.id.exercises_gridView);
+            gv = (GridView)findViewById(R.id.exercises_view_gridView);
             gv.setAdapter(new ImageAdapter(getApplicationContext(), exercise_names, exercise_images));
             registerForContextMenu(gv);
 

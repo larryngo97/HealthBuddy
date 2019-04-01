@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class DrawerActivity extends AppCompatActivity
@@ -39,6 +41,27 @@ public class DrawerActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        View profileIcon = navigationView.getHeaderView(0);
+        profileIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //If current activity = the profile activity, then just close the drawer, do not start a new profile activity
+                if(DrawerActivity.this.getClass().getSimpleName().equals(ProfileActivity.class.getSimpleName()))
+                {
+                    DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout); //finds drawer
+                    if (drawer.isDrawerOpen(GravityCompat.START)) //if the drawer is open
+                    {
+                        drawer.closeDrawer(GravityCompat.START); //close the drawer
+                    }
+                }
+                else //start profile activity
+                {
+                    Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -50,14 +73,26 @@ public class DrawerActivity extends AppCompatActivity
         switch(id)
         {
             case R.id.nav_home:
+                if(DrawerActivity.this.getClass().getSimpleName().equals(MainActivity.class.getSimpleName()))
+                {
+                    break;
+                }
                 intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_exercises:
+                if(DrawerActivity.this.getClass().getSimpleName().equals(ExercisesHomeActivity.class.getSimpleName()))
+                {
+                    break;
+                }
                 intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
                 startActivity(intent);
                 break;
             case R.id.nav_nutrition:
+                if(DrawerActivity.this.getClass().getSimpleName().equals(NutritionActivity.class.getSimpleName()))
+                {
+                    break;
+                }
                 intent = new Intent(getApplicationContext(), NutritionActivity.class);
                 startActivity(intent);
                 break;

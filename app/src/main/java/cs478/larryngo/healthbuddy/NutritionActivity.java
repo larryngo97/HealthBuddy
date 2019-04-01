@@ -3,6 +3,8 @@ package cs478.larryngo.healthbuddy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -24,6 +26,15 @@ public class NutritionActivity extends DrawerActivity{
 
         iv_meter = (ImageView) findViewById(R.id.nutrition_image1);
         iv_meter.setImageResource(R.drawable.nutrition_circle_meter);
+
+        Button addButton = (Button) findViewById(R.id.nutrition_button_add);
+        addButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), DietHomeActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
