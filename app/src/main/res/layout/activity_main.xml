@@ -54,7 +54,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
-                        android:background="@drawable/ic_circle_yellow"
+                        android:background="@drawable/ic_circle_red"
                         android:src="@drawable/ic_account_circle_white_24dp"
                         android:padding="10dp"/>
 

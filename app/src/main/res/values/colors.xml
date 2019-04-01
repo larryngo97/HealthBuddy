@@ -6,7 +6,6 @@
     <color name="colorBackground">#fcfcfc</color>
     <color name="color_lightgray">#ededed</color>
     <color name="color_purple">#7c4dff</color>
-    <color name="color_yellow">#ffb300</color>
     <color name="color_green">#00bfa5</color>
     <color name="color_navyblue">#23283a</color>
     <color name="color_pink">#fe104d</color>
@@ -16,4 +15,8 @@
     <color name="color_lightblue">#12c7e3</color>
     <color name="color_lightgreen">#0abf53</color>
     <color name="color_white">#fff</color>
+    <color name="color_red">#ff0000</color>
+    <color name="color_redorange">#ff6400</color>
+    <color name="color_yellow">#FFFF00</color>
+    <color name="color_neongreen">#39ff14</color>
 </resources>

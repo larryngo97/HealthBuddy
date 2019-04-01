@@ -60,7 +60,7 @@
                         android:layout_height="64dp"
                         android:background="@drawable/ic_circle_lightgreen"
                         android:src="@drawable/ic_chest"
-                        android:padding="10dp"/>
+                        android:padding="0dp"/>
 
                     <View
                         android:layout_width="match_parent"
