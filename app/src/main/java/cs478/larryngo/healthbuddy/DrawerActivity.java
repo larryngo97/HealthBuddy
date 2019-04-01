@@ -42,8 +42,9 @@ public class DrawerActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View profileIcon = navigationView.getHeaderView(0);
-        profileIcon.setOnClickListener(new View.OnClickListener() {
+        View drawerHeader = navigationView.getHeaderView(0);
+        ImageView profile = (ImageView) drawerHeader.findViewById(R.id.nav_profile);
+        profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //If current activity = the profile activity, then just close the drawer, do not start a new profile activity
