@@ -11,8 +11,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-public class MainActivity extends DrawerActivity
-        implements NavigationView.OnNavigationItemSelectedListener, View.OnClickListener {
+public class MainActivity extends DrawerActivity implements View.OnClickListener {
 
     private final String TAG = "Home";
     private CardView cv_profile, cv_exercises, cv_nutrition, cv_achievements, cv_schedule;
@@ -49,7 +48,7 @@ public class MainActivity extends DrawerActivity
                 Toast.makeText(MainActivity.this, "Clicked profile!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.main_cv_exercises:
-                intent = new Intent(getApplicationContext(), ExercisesViewActivity.class);
+                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
                 startActivity(intent);
                 break;
             case R.id.main_cv_nutrition:

@@ -10,5 +10,9 @@
     <color name="color_green">#00bfa5</color>
     <color name="color_navyblue">#23283a</color>
     <color name="color_pink">#fe104d</color>
-    <color name="color_black">#66000000</color>
+    <color name="color_darkgreen">#2e9938</color>
+    <color name="color_magenta">#a25bd7</color>
+    <color name="color_lightpink">#f67da7</color>
+    <color name="color_lightblue">#12c7e3</color>
+    <color name="color_lightgreen">#0abf53</color>
 </resources>

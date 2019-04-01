@@ -25,7 +25,7 @@
             android:label="About"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
-                <action android:name="android.intent.action.VIEW" />/>
+                <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
 
@@ -40,7 +40,16 @@
 
         <activity
             android:name=".ExercisesViewActivity"
-            android:label="Exercise View"
+            android:label="Exercises"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ExercisesInfoActivity"
+            android:label="Exercises"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
