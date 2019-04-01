@@ -68,7 +68,7 @@ public class DrawerActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_settings:
-                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Clicked settings!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
                 intent = new Intent(getApplicationContext(), AboutActivity.class);
