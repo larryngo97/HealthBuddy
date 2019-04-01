@@ -34,45 +34,12 @@ public class AboutActivity extends DrawerActivity implements NavigationView.OnNa
 
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
+
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        Intent intent;
-        int id = item.getItemId();
-
-        switch(id)
-        {
-            case R.id.nav_home:
-                intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.nav_exercises:
-                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.nav_nutrition:
-                Toast.makeText(getApplicationContext(), "Clicked nutrition!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_achievements:
-                Toast.makeText(getApplicationContext(), "Clicked achievements!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_schedule:
-                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_settings:
-                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_about:
-                break;
-            default:
-                break;
-        }
-
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //starts up intent
+        startActivity(intent); //starts the intent
     }
 
     @Override

@@ -20,7 +20,7 @@ public class ExercisesViewActivity extends DrawerActivity {
     private String text_header = "NULL";
     private int KEY_USER_SELECTION;
 
-    private ArrayList<String> exercise_names;
+    private ArrayList<String> exercise_names, exercise_difficulty, exercise_instructions, exercise_website;
     private ArrayList<Integer> exercise_images;
 
     @Override
@@ -37,6 +37,9 @@ public class ExercisesViewActivity extends DrawerActivity {
 
             KEY_USER_SELECTION = extras.getInt("EXTRA_KEY_USER_SELECTION");
             exercise_names = new ArrayList<String>();
+            exercise_difficulty = new ArrayList<String>();
+            exercise_instructions = new ArrayList<String>();
+            exercise_website = new ArrayList<String>();
             exercise_images = new ArrayList<Integer>();
 
             switch(KEY_USER_SELECTION)
@@ -46,6 +49,7 @@ public class ExercisesViewActivity extends DrawerActivity {
                     exercise_names.add("Push-ups");
                     exercise_images.add(R.drawable.gif_benchpress_150x150);
                     exercise_images.add(R.drawable.gif_pushups_150x150);
+                    exercise_difficulty.add("***");
                     break;
                 case 2: //shoulder
                     exercise_names.add("Shoulder Press");
@@ -76,10 +80,47 @@ public class ExercisesViewActivity extends DrawerActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Intent intent = new Intent (getApplicationContext(), ExercisesInfoActivity.class);
-
+                    intent.putExtra("EXTRA_EXERCISE_INFO_IMAGE", exercise_images.get(position));
+                    intent.putExtra("EXTRA_EXERCISE_INFO_HEADER", exercise_names.get(position));
+                    startActivity(intent);
                 }
             });
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onStart() {
+        Log.i(TAG, "++ ON START ++");
+        super.onStart();
+    }
+
+    @Override
+    protected void onResume() {
+        Log.i(TAG, "++ ON RESUME ++");
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        Log.i(TAG, "++ ON PAUSE ++");
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        Log.i(TAG, "++ ON STOP ++");
+        super.onStop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.i(TAG, "++ ON DESTROY ++");
+        super.onDestroy();
     }
 }

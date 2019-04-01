@@ -20,7 +20,7 @@ public class ExercisesHomeActivity extends DrawerActivity implements View.OnClic
 
     private final String TAG = "Exercises Home";
     private CardView cv_chest, cv_shoulders, cv_arms, cv_legs;
-    
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,47 +77,10 @@ public class ExercisesHomeActivity extends DrawerActivity implements View.OnClic
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //starts up intent
+        startActivity(intent); //starts the intent
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        Intent intent;
-        int id = item.getItemId();
-
-        switch(id)
-        {
-            case R.id.nav_home:
-                intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.nav_exercises:
-                break;
-            case R.id.nav_nutrition:
-                Toast.makeText(getApplicationContext(), "Clicked nutrition!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_achievements:
-                Toast.makeText(getApplicationContext(), "Clicked achievements!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_schedule:
-                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_settings:
-                Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.nav_about:
-                intent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
 
     @Override
     protected void onStart() {

@@ -47,17 +47,19 @@ public class DrawerActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         Intent intent;
         int id = item.getItemId();
-
-        switch(id) //default choices. Replace them in actual activities
+        switch(id)
         {
             case R.id.nav_home:
-                Toast.makeText(getApplicationContext(), "Clicked home!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_exercises:
-                Toast.makeText(getApplicationContext(), "Clicked exercises!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_nutrition:
-                Toast.makeText(getApplicationContext(), "Clicked nutrition!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), NutritionActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_achievements:
                 Toast.makeText(getApplicationContext(), "Clicked achievements!", Toast.LENGTH_SHORT).show();
@@ -69,13 +71,12 @@ public class DrawerActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
-                Toast.makeText(getApplicationContext(), "Clicked about!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), AboutActivity.class);
+                startActivity(intent);
                 break;
             default:
                 break;
         }
-
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
