@@ -31,56 +31,13 @@ public class NutritionActivity extends DrawerActivity{
         setContentView(R.layout.activity_nutrition_home);
 
         tv_meter_subtitle = (TextView) findViewById(R.id.nutrition_progressbar_meter_subtitle);
-        tv_meter_subtitle.setText(text_meter_subtitle);
-
         tv_meter_reading = (TextView) findViewById(R.id.nutrition_progressbar_percentage);
-        percentageString = Float.toString(percentage) + "%";
-        tv_meter_reading.setText(percentageString);
-
         iv_meter = (ProgressBar) findViewById(R.id.nutrition_progressbar_meter);
+        setNewMeter(); //randomly sets the calorie meter, implement actual use in the future
         iv_meter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Random rand = new Random();
-                float rn = rand.nextInt(3001);
-
-                percentage = (rn / dailyCalories) * 100;
-
-                caloriesCount = (int)rn;
-                text_meter_subtitle = "Daily calories:\n" + caloriesCount + " / " + (int)dailyCalories;
-                tv_meter_subtitle.setText(text_meter_subtitle);
-
-                Log.i(TAG, "Percentage: " + percentage);
-                percentageString = String.format(Locale.US, "%.2f", percentage) + "%";
-
-                if(percentage > 100.0)
-                {
-                    tv_meter_reading.setTextSize(28);
-                }
-                else
-                {
-                    tv_meter_reading.setTextSize(32);
-                }
-
-                tv_meter_reading.setText(percentageString);
-                iv_meter.setProgress((int)percentage);
-
-                if(percentage < 25.0 || percentage > 175.0)
-                {
-                    iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_red), PorterDuff.Mode.SRC_IN);
-                }
-                else if(percentage < 50.0 || percentage > 150.0)
-                {
-                    iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_redorange), PorterDuff.Mode.SRC_IN);
-                }
-                else if(percentage < 75.0 || percentage > 125.0)
-                {
-                    iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_yellow), PorterDuff.Mode.SRC_IN);
-                }
-                else if(percentage < 100.0 || percentage >= 100.0)
-                {
-                    iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_neongreen), PorterDuff.Mode.SRC_IN);
-                }
+                setNewMeter(); //for debug purposes. remove in the future
             }
         });
 
@@ -92,6 +49,50 @@ public class NutritionActivity extends DrawerActivity{
                 startActivity(intent);
             }
         });
+    }
+
+    public void setNewMeter()
+    {
+        Random rand = new Random();
+        float rn = rand.nextInt(3001);
+
+        percentage = (rn / dailyCalories) * 100;
+
+        caloriesCount = (int)rn;
+        text_meter_subtitle = "Daily calories:\n" + caloriesCount + " / " + (int)dailyCalories;
+        tv_meter_subtitle.setText(text_meter_subtitle);
+
+        Log.i(TAG, "Percentage: " + percentage);
+        percentageString = String.format(Locale.US, "%.2f", percentage) + "%";
+
+        if(percentage > 100.0)
+        {
+            tv_meter_reading.setTextSize(28);
+        }
+        else
+        {
+            tv_meter_reading.setTextSize(32);
+        }
+
+        tv_meter_reading.setText(percentageString);
+        iv_meter.setProgress((int)percentage);
+
+        if(percentage < 25.0 || percentage > 175.0)
+        {
+            iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_red), PorterDuff.Mode.SRC_IN);
+        }
+        else if(percentage < 50.0 || percentage > 150.0)
+        {
+            iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_redorange), PorterDuff.Mode.SRC_IN);
+        }
+        else if(percentage < 75.0 || percentage > 125.0)
+        {
+            iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_yellow), PorterDuff.Mode.SRC_IN);
+        }
+        else if(percentage < 100.0 || percentage >= 100.0)
+        {
+            iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_neongreen), PorterDuff.Mode.SRC_IN);
+        }
     }
 
 
