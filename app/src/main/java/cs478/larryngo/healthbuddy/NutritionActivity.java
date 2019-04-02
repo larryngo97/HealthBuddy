@@ -91,7 +91,7 @@ public class NutritionActivity extends DrawerActivity{
         }
         else if(percentage < 100.0 || percentage >= 100.0)
         {
-            iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_neongreen), PorterDuff.Mode.SRC_IN);
+            iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_darkgreen), PorterDuff.Mode.SRC_IN);
         }
     }
 

@@ -57,7 +57,8 @@ public class MainActivity extends DrawerActivity implements View.OnClickListener
                 startActivity(intent);
                 break;
             case R.id.main_cv_achievements:
-                Toast.makeText(MainActivity.this, "Clicked achievements!", Toast.LENGTH_SHORT).show();
+                intent = new Intent(getApplicationContext(), AchievementsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.main_cv_schedule:
                 Toast.makeText(MainActivity.this, "Clicked schedule!", Toast.LENGTH_SHORT).show();

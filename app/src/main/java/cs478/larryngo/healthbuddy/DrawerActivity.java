@@ -98,7 +98,12 @@ public class DrawerActivity extends AppCompatActivity
                 startActivity(intent);
                 break;
             case R.id.nav_achievements:
-                Toast.makeText(getApplicationContext(), "Clicked achievements!", Toast.LENGTH_SHORT).show();
+                if(DrawerActivity.this.getClass().getSimpleName().equals(AchievementsActivity.class.getSimpleName()))
+                {
+                    break;
+                }
+                intent = new Intent(getApplicationContext(), AchievementsActivity.class);
+                startActivity(intent);
                 break;
             case R.id.nav_schedule:
                 Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();

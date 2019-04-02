@@ -45,25 +45,25 @@ public class ExercisesHomeActivity extends DrawerActivity implements View.OnClic
         switch(id)
         {
             case R.id.exercises_cv_chest:
-                Toast.makeText(getApplicationContext(), "Clicked chest!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked chest!", Toast.LENGTH_SHORT).show();
                 intent.putExtra("EXTRA_EXERCISE_HEADER", "Chest");
                 intent.putExtra("EXTRA_KEY_USER_SELECTION", 1);
                 startActivity(intent);
                 break;
             case R.id.exercises_cv_shoulders:
-                Toast.makeText(getApplicationContext(), "Clicked shoulders!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked shoulders!", Toast.LENGTH_SHORT).show();
                 intent.putExtra("EXTRA_EXERCISE_HEADER", "Shoulders");
                 intent.putExtra("EXTRA_KEY_USER_SELECTION", 2);
                 startActivity(intent);
                 break;
             case R.id.exercises_cv_arms:
-                Toast.makeText(getApplicationContext(), "Clicked arms!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked arms!", Toast.LENGTH_SHORT).show();
                 intent.putExtra("EXTRA_EXERCISE_HEADER", "Arms");
                 intent.putExtra("EXTRA_KEY_USER_SELECTION", 3);
                 startActivity(intent);
                 break;
             case R.id.exercises_cv_legs:
-                Toast.makeText(getApplicationContext(), "Clicked legs!", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked legs!", Toast.LENGTH_SHORT).show();
                 intent.putExtra("EXTRA_EXERCISE_HEADER", "Legs");
                 intent.putExtra("EXTRA_KEY_USER_SELECTION", 4);
                 startActivity(intent);

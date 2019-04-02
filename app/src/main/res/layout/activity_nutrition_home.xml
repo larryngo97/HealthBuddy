@@ -95,14 +95,14 @@
                 android:layout_marginTop="0dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_toStartOf="@+id/imageView2"
-                android:layout_toLeftOf="@+id/imageView2"
+                android:layout_toStartOf="@+id/nutrition_graph"
+                android:layout_toLeftOf="@+id/nutrition_graph"
                 android:gravity="center_horizontal"
                 android:text="calories count"
                 android:textSize="16sp" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/nutrition_graph"
                 android:layout_width="275dp"
                 android:layout_height="175dp"
                 android:layout_below="@+id/nutrition_onboard"
@@ -118,7 +118,7 @@
                 android:id="@+id/nutrition_divider_bar"
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_below="@+id/imageView2"
+                android:layout_below="@+id/nutrition_graph"
                 android:layout_marginTop="25dp"
                 android:background="@color/color_navyblue" />
 
