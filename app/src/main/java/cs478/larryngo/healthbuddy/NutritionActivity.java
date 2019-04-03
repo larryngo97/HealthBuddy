@@ -54,7 +54,7 @@ public class NutritionActivity extends DrawerActivity{
     public void setNewMeter()
     {
         Random rand = new Random();
-        float rn = rand.nextInt(3001);
+        float rn = rand.nextInt(4000);
 
         percentage = (rn / dailyCalories) * 100;
 
@@ -77,15 +77,15 @@ public class NutritionActivity extends DrawerActivity{
         tv_meter_reading.setText(percentageString);
         iv_meter.setProgress((int)percentage);
 
-        if(percentage < 25.0 || percentage > 175.0)
+        if(percentage < 50.0 || percentage > 150.0)
         {
             iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_red), PorterDuff.Mode.SRC_IN);
         }
-        else if(percentage < 50.0 || percentage > 150.0)
+        else if(percentage < 75.0 || percentage > 130.0)
         {
             iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_redorange), PorterDuff.Mode.SRC_IN);
         }
-        else if(percentage < 75.0 || percentage > 125.0)
+        else if(percentage < 90.0 || percentage > 110.0)
         {
             iv_meter.getProgressDrawable().setColorFilter(getResources().getColor(R.color.color_yellow), PorterDuff.Mode.SRC_IN);
         }
