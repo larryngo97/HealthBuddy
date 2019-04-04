@@ -11,8 +11,10 @@ import java.util.Arrays;
 public class DietViewActivity extends DrawerActivity {
 
     private final String TAG = "Diet View";
-    private ArrayList<Integer> dietInfographic = new ArrayList<Integer>(Arrays.asList(R.drawable.ic_keto,
-            R.drawable.ic_vegan, R.drawable.ic_paleo));
+
+
+    private ArrayList<Integer> dietInfographic = new ArrayList<Integer>(Arrays.asList(R.drawable.diet_infographic_keto,
+            R.drawable.diet_infographic_vegan, R.drawable.diet_infographic_paleo));
 
     private ImageView iv_image;
     private TextView tv_header;
