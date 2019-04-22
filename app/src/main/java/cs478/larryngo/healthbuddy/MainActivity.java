@@ -2,104 +2,85 @@ package cs478.larryngo.healthbuddy;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.CardView;
 import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-public class MainActivity extends DrawerActivity implements View.OnClickListener {
+
+public class MainActivity extends DrawerActivity {
 
     private final String TAG = "Home";
-    private CardView cv_profile, cv_exercises, cv_nutrition, cv_achievements, cv_schedule;
+    protected static FragmentManager fm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //adds the views to the respective locations
-        cv_profile = (CardView) findViewById(R.id.main_cv_profile);
-        cv_exercises = (CardView) findViewById(R.id.main_cv_exercises);
-        cv_nutrition = (CardView) findViewById(R.id.main_cv_nutrition);
-        cv_achievements = (CardView) findViewById(R.id.main_cv_achievements);
-        cv_schedule = (CardView) findViewById(R.id.main_cv_schedule);
+        BottomNavigationView botNavBar = findViewById(R.id.navigation_bottom);
+        botNavBar.setOnNavigationItemSelectedListener(navListener);
 
-        //sets on click listeners for each option
-        cv_profile.setOnClickListener(this);
-        cv_exercises.setOnClickListener(this);
-        cv_nutrition.setOnClickListener(this);
-        cv_achievements.setOnClickListener(this);
-        cv_schedule.setOnClickListener(this);
-        
+        fm = getSupportFragmentManager();
+
+        fm.beginTransaction().replace(R.id.fragment_container,
+                new MainFragment()).commit();
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        Intent intent;
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+        new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                Fragment fragment = null;
 
-        switch(id)
-        {
-            case R.id.main_cv_profile:
-                intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.main_cv_exercises:
-                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.main_cv_nutrition:
-                intent = new Intent(getApplicationContext(), NutritionActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.main_cv_achievements:
-                intent = new Intent(getApplicationContext(), AchievementsActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.main_cv_schedule:
-                Toast.makeText(MainActivity.this, "Clicked schedule!", Toast.LENGTH_SHORT).show();
-                break;
-            default:
-                break;
-        }
+                switch (menuItem.getItemId())
+                {
+                    case R.id.nav_bot_home:
+                        fragment = new MainFragment();
+                        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        break;
+                    case R.id.nav_bot_exercises:
+                        fragment = new ExercisesHomeActivity();
+                        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        break;
+                    case R.id.nav_bot_nutrition:
+                        fragment = new NutritionActivity();
+                        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        break;
+                    case R.id.nav_bot_favorite:
+                        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        break;
+                }
 
-    }
+                if(fragment != null)
+                {
+                    fm.beginTransaction().replace(R.id.fragment_container,
+                            fragment).addToBackStack(null).commit();
+                }
+
+                return true;
+            }
+        };
+
+
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(Intent.ACTION_MAIN); //starts up intent
-        intent.addCategory(Intent.CATEGORY_HOME); //makes the app go to home
-        startActivity(intent); //starts the intent
-    }
-
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        int backStackCount = fm.getBackStackEntryCount(); //gets count of the back stack
+        if (backStackCount != 0) //if theres a current back stack
+        {
+            Log.i(TAG, "++ POPPING STACK ++");
+            fm.popBackStack(); //pops the stack, reformats the layout //pops the back stack to 0
+            Log.i(TAG, "++ CURRENT BACK STACK COUNT: " + backStackCount + " ++");
         }
-
-        return super.onOptionsItemSelected(item);
+        else
+        {
+            super.onBackPressed();
+        }
     }
-    */
 
     @Override
     protected void onStart() {

@@ -1,15 +1,19 @@
 package cs478.larryngo.healthbuddy;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.CardView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.Toast;
 
@@ -17,98 +21,100 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class ExercisesHomeActivity extends DrawerActivity implements View.OnClickListener {
+public class ExercisesHomeActivity extends Fragment implements View.OnClickListener {
 
     private final String TAG = "Exercises Home";
     private CardView cv_chest, cv_shoulders, cv_arms, cv_legs;
+    protected static String EXTRA_EXERCISE_HEADER = "NULL";
+    protected static int EXTRA_EXERCISE_SELECTION = 0;
 
+    @Nullable
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_exercises_home);
-
-        cv_chest = (CardView) findViewById(R.id.exercises_cv_chest);
-        cv_shoulders = (CardView) findViewById(R.id.exercises_cv_shoulders);
-        cv_arms = (CardView) findViewById(R.id.exercises_cv_arms);
-        cv_legs = (CardView) findViewById(R.id.exercises_cv_legs);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_exercises_home, container, false);
+        cv_chest = (CardView) view.findViewById(R.id.exercises_cv_chest);
+        cv_shoulders = (CardView) view.findViewById(R.id.exercises_cv_shoulders);
+        cv_arms = (CardView) view.findViewById(R.id.exercises_cv_arms);
+        cv_legs = (CardView) view.findViewById(R.id.exercises_cv_legs);
 
         cv_chest.setOnClickListener(this);
         cv_shoulders.setOnClickListener(this);
         cv_arms.setOnClickListener(this);
         cv_legs.setOnClickListener(this);
+        return view;
     }
+
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        Intent intent = new Intent(getApplicationContext(), ExercisesViewActivity.class);
+
+        //Fragment fragment = new Fragment();
+        //Bundle bundle = new Bundle();
 
         switch(id)
         {
             case R.id.exercises_cv_chest:
-                //Toast.makeText(getApplicationContext(), "Clicked chest!", Toast.LENGTH_SHORT).show();
-                intent.putExtra("EXTRA_EXERCISE_HEADER", "Chest");
-                intent.putExtra("EXTRA_KEY_USER_SELECTION", 1);
-                startActivity(intent);
+                EXTRA_EXERCISE_HEADER = "Chest";
+                EXTRA_EXERCISE_SELECTION = 1;
+                //bundle.putString("EXTRA_EXERCISE_HEADER", "Chest");
+                //bundle.putInt("EXTRA_KEY_USER_SELECTION", 1);
                 break;
             case R.id.exercises_cv_shoulders:
-                //Toast.makeText(getApplicationContext(), "Clicked shoulders!", Toast.LENGTH_SHORT).show();
-                intent.putExtra("EXTRA_EXERCISE_HEADER", "Shoulders");
-                intent.putExtra("EXTRA_KEY_USER_SELECTION", 2);
-                startActivity(intent);
+                EXTRA_EXERCISE_HEADER = "Shoulders";
+                EXTRA_EXERCISE_SELECTION = 2;
+                //bundle.putString("EXTRA_EXERCISE_HEADER", "Shoulders");
+                //bundle.putInt("EXTRA_KEY_USER_SELECTION", 2);
                 break;
             case R.id.exercises_cv_arms:
-                //Toast.makeText(getApplicationContext(), "Clicked arms!", Toast.LENGTH_SHORT).show();
-                intent.putExtra("EXTRA_EXERCISE_HEADER", "Arms");
-                intent.putExtra("EXTRA_KEY_USER_SELECTION", 3);
-                startActivity(intent);
+                EXTRA_EXERCISE_HEADER = "Arms";
+                EXTRA_EXERCISE_SELECTION = 3;
+                //bundle.putString("EXTRA_EXERCISE_HEADER", "Arms");
+                //bundle.putInt("EXTRA_KEY_USER_SELECTION", 3);
                 break;
             case R.id.exercises_cv_legs:
-                //Toast.makeText(getApplicationContext(), "Clicked legs!", Toast.LENGTH_SHORT).show();
-                intent.putExtra("EXTRA_EXERCISE_HEADER", "Legs");
-                intent.putExtra("EXTRA_KEY_USER_SELECTION", 4);
-                startActivity(intent);
+                EXTRA_EXERCISE_HEADER = "Legs";
+                EXTRA_EXERCISE_SELECTION = 4;
+                //bundle.putString("EXTRA_EXERCISE_HEADER", "Legs");
+                //bundle.putInt("EXTRA_KEY_USER_SELECTION", 4);
                 break;
             default:
                 break;
         }
+        //fragment.setArguments(bundle);
+
+        MainActivity.fm.beginTransaction().replace(R.id.fragment_container,
+                new ExercisesViewActivity()).addToBackStack(null).commit();
+
 
     }
 
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //starts up intent
-        startActivity(intent); //starts the intent
-    }
-
-
-    @Override
-    protected void onStart() {
+    public void onStart() {
         Log.i(TAG, "++ ON START ++");
         super.onStart();
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         Log.i(TAG, "++ ON RESUME ++");
         super.onResume();
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         Log.i(TAG, "++ ON PAUSE ++");
         super.onPause();
     }
 
     @Override
-    protected void onStop() {
+    public void onStop() {
         Log.i(TAG, "++ ON STOP ++");
         super.onStop();
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         Log.i(TAG, "++ ON DESTROY ++");
         super.onDestroy();
     }

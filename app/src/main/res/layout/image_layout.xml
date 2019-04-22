@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<android.support.v4.widget.DrawerLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -19,13 +19,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/color_lightgray">
-
-            <LinearLayout
-                android:id="@+id/app_bar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <include layout="@layout/app_bar" />
-            </LinearLayout>
 
             <TextView
                 android:id="@+id/image_layout_header"
@@ -48,12 +41,4 @@
         </RelativeLayout>
     </ScrollView>
 
-    <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/drawer_view" />
-
-</android.support.v4.widget.DrawerLayout>
+</RelativeLayout>

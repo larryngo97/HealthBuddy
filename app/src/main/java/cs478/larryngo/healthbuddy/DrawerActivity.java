@@ -3,6 +3,8 @@ package cs478.larryngo.healthbuddy;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -70,40 +72,26 @@ public class DrawerActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         Intent intent;
+
+        Fragment fragment = null;
+        FragmentManager fm = MainActivity.fm;
         int id = item.getItemId();
         switch(id)
         {
             case R.id.nav_home:
-                if(DrawerActivity.this.getClass().getSimpleName().equals(MainActivity.class.getSimpleName()))
-                {
-                    break;
-                }
-                intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
+                fragment = new MainFragment();
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_exercises:
-                if(DrawerActivity.this.getClass().getSimpleName().equals(ExercisesHomeActivity.class.getSimpleName()))
-                {
-                    break;
-                }
-                intent = new Intent(getApplicationContext(), ExercisesHomeActivity.class);
-                startActivity(intent);
+                fragment = new ExercisesHomeActivity();
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_nutrition:
-                if(DrawerActivity.this.getClass().getSimpleName().equals(NutritionActivity.class.getSimpleName()))
-                {
-                    break;
-                }
-                intent = new Intent(getApplicationContext(), NutritionActivity.class);
-                startActivity(intent);
+                fragment = new NutritionActivity();
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_achievements:
-                if(DrawerActivity.this.getClass().getSimpleName().equals(AchievementsActivity.class.getSimpleName()))
-                {
-                    break;
-                }
-                intent = new Intent(getApplicationContext(), AchievementsActivity.class);
-                startActivity(intent);
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_schedule:
                 Toast.makeText(getApplicationContext(), "Clicked schedule!", Toast.LENGTH_SHORT).show();
@@ -112,12 +100,19 @@ public class DrawerActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Clicked settings!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
-                intent = new Intent(getApplicationContext(), AboutActivity.class);
-                startActivity(intent);
+                fragment = new AboutActivity();
+                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             default:
                 break;
         }
+
+        if(fragment != null)
+        {
+            fm.beginTransaction().replace(R.id.fragment_container,
+                    fragment).addToBackStack(null).commit();
+        }
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

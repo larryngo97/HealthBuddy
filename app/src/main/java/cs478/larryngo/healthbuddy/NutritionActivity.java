@@ -3,8 +3,13 @@ package cs478.larryngo.healthbuddy;
 import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -12,7 +17,7 @@ import android.widget.TextView;
 import java.util.Locale;
 import java.util.Random;
 
-public class NutritionActivity extends DrawerActivity{
+public class NutritionActivity extends Fragment {
 
     private final String TAG = "Nutrition";
     private TextView tv_meter_subtitle;
@@ -25,14 +30,14 @@ public class NutritionActivity extends DrawerActivity{
     private float percentage = 80.0f;
     private String percentageString;
 
+    @Nullable
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nutrition_home);
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.activity_nutrition_home, container, false);
+        tv_meter_subtitle = (TextView) view.findViewById(R.id.nutrition_progressbar_meter_subtitle);
+        tv_meter_reading = (TextView) view.findViewById(R.id.nutrition_progressbar_percentage);
+        iv_meter = (ProgressBar) view.findViewById(R.id.nutrition_progressbar_meter);
 
-        tv_meter_subtitle = (TextView) findViewById(R.id.nutrition_progressbar_meter_subtitle);
-        tv_meter_reading = (TextView) findViewById(R.id.nutrition_progressbar_percentage);
-        iv_meter = (ProgressBar) findViewById(R.id.nutrition_progressbar_meter);
         setNewMeter(); //randomly sets the calorie meter, implement actual use in the future
         iv_meter.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,14 +46,15 @@ public class NutritionActivity extends DrawerActivity{
             }
         });
 
-        Button addButton = (Button) findViewById(R.id.nutrition_button_add);
+        Button addButton = (Button) view.findViewById(R.id.nutrition_button_add);
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), DietHomeActivity.class);
+                Intent intent = new Intent(getActivity(), DietHomeActivity.class);
                 startActivity(intent);
             }
         });
+        return view;
     }
 
     public void setNewMeter()
@@ -95,40 +101,32 @@ public class NutritionActivity extends DrawerActivity{
         }
     }
 
-
     @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class); //starts up intent
-        startActivity(intent); //starts the intent
-    }
-
-    @Override
-    protected void onStart() {
+    public void onStart() {
         Log.i(TAG, "++ ON START ++");
         super.onStart();
     }
 
     @Override
-    protected void onResume() {
+    public void onResume() {
         Log.i(TAG, "++ ON RESUME ++");
         super.onResume();
     }
 
     @Override
-    protected void onPause() {
+    public void onPause() {
         Log.i(TAG, "++ ON PAUSE ++");
         super.onPause();
     }
 
     @Override
-    protected void onStop() {
+    public void onStop() {
         Log.i(TAG, "++ ON STOP ++");
         super.onStop();
     }
 
     @Override
-    protected void onDestroy() {
+    public void onDestroy() {
         Log.i(TAG, "++ ON DESTROY ++");
         super.onDestroy();
     }
