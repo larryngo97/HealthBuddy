@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_bot_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_bot_exercises"
+        android:icon="@drawable/ic_fitness_center_black_24dp"
+        android:title="Exercises"/>
+
+    <item
+        android:id="@+id/nav_bot_nutrition"
+        android:icon="@drawable/ic_apple"
+        android:title="Nutrition"/>
+
+    <item
+        android:id="@+id/nav_bot_favorite"
+        android:icon="@drawable/ic_star_black_24dp"
+        android:title="Favorites"/>
+
+</menu>

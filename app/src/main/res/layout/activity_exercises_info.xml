@@ -22,6 +22,7 @@
                 android:id="@+id/app_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
                 <include layout="@layout/app_bar" />
             </LinearLayout>
 
@@ -35,31 +36,33 @@
                 android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
                 android:text="EXERCISE_NAME"
-                android:textSize="24sp" />
+                android:textSize="36sp" />
 
             <TextView
                 android:id="@+id/exercises_info_difficulty"
-                android:background="@color/color_lightblue"
                 android:layout_width="match_parent"
-                android:layout_height="25dp"
+                android:layout_height="30dp"
                 android:layout_below="@+id/exercises_info_header"
+                android:background="@color/color_crimson"
                 android:gravity="center"
-                android:text="DIFFICULTY_LEVEL" />
+                android:text="DIFFICULTY_LEVEL"
+                android:textColor="@color/color_white"
+                android:textSize="18sp" />
 
             <pl.droidsonroids.gif.GifImageView
                 android:id="@+id/exercises_info_image"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="338dp"
+                android:layout_height="239dp"
                 android:layout_below="@+id/exercises_info_difficulty"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="86dp"
-                android:layout_marginLeft="86dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginLeft="37dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginEnd="83dp"
-                android:layout_marginRight="83dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
                 tools:srcCompat="@tools:sample/avatars" />
 
             <TextView
@@ -77,9 +80,10 @@
                 android:layout_marginEnd="11dp"
                 android:layout_marginRight="11dp"
                 android:gravity="start"
-                android:text="EXERCISES_INFO_INSTRUCTIONS" />
+                android:text="EXERCISES_INFO_INSTRUCTIONS"
+                android:textSize="18sp" />
 
-            <TextView
+            <Button
                 android:id="@+id/exercises_info_learnmore"
                 android:layout_width="289dp"
                 android:layout_height="wrap_content"
@@ -96,7 +100,7 @@
                 android:layout_marginBottom="25dp"
                 android:background="@color/design_default_color_primary"
                 android:gravity="center"
-                android:text="EXERCISES_LEARN_MORE"
+                android:text="Click here to learn more!"
                 android:textColor="@color/color_white" />
 
             <TextView
@@ -113,10 +117,11 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
-                android:background="@color/color_lightpink"
+                android:background="@color/color_hotpink"
                 android:fontFamily="sans-serif-condensed-light"
                 android:gravity="center"
                 android:text="INSTRUCTIONS"
+                android:textColor="@color/color_white"
                 android:textSize="24sp" />
         </RelativeLayout>
     </ScrollView>

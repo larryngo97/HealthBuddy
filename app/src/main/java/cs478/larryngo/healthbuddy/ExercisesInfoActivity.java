@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +18,7 @@ public class ExercisesInfoActivity extends DrawerActivity {
     private TextView tv_header;
     private TextView tv_difficulty;
     private TextView tv_instructions;
-    private TextView tv_website;
+    private Button button_website;
 
     private String text_header;
     private String text_difficulty;
@@ -33,7 +34,7 @@ public class ExercisesInfoActivity extends DrawerActivity {
         tv_header = (TextView) findViewById(R.id.exercises_info_header);
         tv_difficulty = (TextView) findViewById(R.id.exercises_info_difficulty);
         tv_instructions = (TextView) findViewById(R.id.exercises_info_instructions);
-        tv_website = (TextView) findViewById(R.id.exercises_info_learnmore);
+        button_website = (Button) findViewById(R.id.exercises_info_learnmore);
 
         Bundle extras = getIntent().getExtras();
 
@@ -48,9 +49,9 @@ public class ExercisesInfoActivity extends DrawerActivity {
             tv_header.setText(text_header);
             tv_difficulty.setText(text_difficulty);
             tv_instructions.setText(text_instructions);
-            tv_website.setText(text_website);
+            //button_website.setText(text_website);
 
-            tv_website.setOnClickListener(new View.OnClickListener() {
+            button_website.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse(text_website));
