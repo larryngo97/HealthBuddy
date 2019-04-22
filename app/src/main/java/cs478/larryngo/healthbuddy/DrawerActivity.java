@@ -79,15 +79,15 @@ public class DrawerActivity extends AppCompatActivity
         switch(id)
         {
             case R.id.nav_home:
-                fragment = new MainFragment();
+                fragment = new MainHomeFragment();
                 fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_exercises:
-                fragment = new ExercisesHomeActivity();
+                fragment = new ExercisesHomeFragment();
                 fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_nutrition:
-                fragment = new NutritionActivity();
+                fragment = new NutritionFragment();
                 fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_achievements:
@@ -100,7 +100,7 @@ public class DrawerActivity extends AppCompatActivity
                 Toast.makeText(getApplicationContext(), "Clicked settings!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.nav_about:
-                fragment = new AboutActivity();
+                fragment = new AboutFragment();
                 fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             default:

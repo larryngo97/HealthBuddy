@@ -28,7 +28,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".AboutActivity"
+            android:name=".AboutFragment"
             android:label="About"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -36,7 +36,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ExercisesHomeActivity"
+            android:name=".ExercisesHomeFragment"
             android:label="Exercises"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ExercisesViewActivity"
+            android:name=".ExercisesViewFragment"
             android:label="Exercises"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -52,7 +52,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ExercisesInfoActivity"
+            android:name=".ExercisesInfoFragment"
             android:label="Exercises"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -60,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NutritionActivity"
+            android:name=".NutritionFragment"
             android:label="Nutrition"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>

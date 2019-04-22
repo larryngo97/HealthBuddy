@@ -1,10 +1,8 @@
 package cs478.larryngo.healthbuddy;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,9 +12,8 @@ import android.widget.GridView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class ExercisesViewActivity extends ExercisesHomeActivity {
+public class ExercisesViewFragment extends ExercisesHomeFragment {
 
     private final String TAG = "Exercises View";
 
@@ -40,10 +37,10 @@ public class ExercisesViewActivity extends ExercisesHomeActivity {
         View view = inflater.inflate(R.layout.activity_exercises_view, container, false);
         tv_header = (TextView) view.findViewById(R.id.exercises_view_header);
 
-        text_header = ExercisesHomeActivity.EXTRA_EXERCISE_HEADER;
+        text_header = ExercisesHomeFragment.EXTRA_EXERCISE_HEADER;
         tv_header.setText(text_header);
 
-        KEY_USER_SELECTION = ExercisesHomeActivity.EXTRA_EXERCISE_SELECTION;
+        KEY_USER_SELECTION = ExercisesHomeFragment.EXTRA_EXERCISE_SELECTION;
 
         exercise_names = new ArrayList<String>();
         exercise_difficulty = new ArrayList<String>();
@@ -169,8 +166,8 @@ public class ExercisesViewActivity extends ExercisesHomeActivity {
                 EXTRA_EXERCISE_INFO_INSTRUCTIONS = exercise_instructions.get(position);
                 EXTRA_EXERCISE_INFO_WEBSITE = exercise_website.get(position);
 
-                MainActivity.fm.beginTransaction().replace(R.id.fragment_container,
-                        new ExercisesInfoActivity()).addToBackStack(null).commit();
+                MainActivity.fm.beginTransaction().setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right)
+                        .replace(R.id.fragment_container, new ExercisesInfoFragment()).addToBackStack(null).commit();
             }
         });
         return view;

@@ -1,12 +1,10 @@
 package cs478.larryngo.healthbuddy;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
-import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.MenuItem;
 
@@ -15,19 +13,20 @@ public class MainActivity extends DrawerActivity {
 
     private final String TAG = "Home";
     protected static FragmentManager fm;
+    BottomNavigationView botNavBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        BottomNavigationView botNavBar = findViewById(R.id.navigation_bottom);
+        botNavBar = findViewById(R.id.navigation_bottom);
         botNavBar.setOnNavigationItemSelectedListener(navListener);
 
         fm = getSupportFragmentManager();
 
         fm.beginTransaction().replace(R.id.fragment_container,
-                new MainFragment()).commit();
+                new MainHomeFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
@@ -39,15 +38,15 @@ public class MainActivity extends DrawerActivity {
                 switch (menuItem.getItemId())
                 {
                     case R.id.nav_bot_home:
-                        fragment = new MainFragment();
+                        fragment = new MainHomeFragment();
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                     case R.id.nav_bot_exercises:
-                        fragment = new ExercisesHomeActivity();
+                        fragment = new ExercisesHomeFragment();
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                     case R.id.nav_bot_nutrition:
-                        fragment = new NutritionActivity();
+                        fragment = new NutritionFragment();
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                     case R.id.nav_bot_favorite:
@@ -57,8 +56,8 @@ public class MainActivity extends DrawerActivity {
 
                 if(fragment != null)
                 {
-                    fm.beginTransaction().replace(R.id.fragment_container,
-                            fragment).addToBackStack(null).commit();
+                    fm.beginTransaction().setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_down, R.anim.slide_in_down, R.anim.slide_out_up)
+                            .replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
                 }
 
                 return true;
@@ -75,6 +74,12 @@ public class MainActivity extends DrawerActivity {
             Log.i(TAG, "++ POPPING STACK ++");
             fm.popBackStack(); //pops the stack, reformats the layout //pops the back stack to 0
             Log.i(TAG, "++ CURRENT BACK STACK COUNT: " + backStackCount + " ++");
+
+            if(backStackCount == 1)
+            {
+                Log.i(TAG, "Setting to home");
+                botNavBar.getMenu().getItem(0).setChecked(true);
+            }
         }
         else
         {

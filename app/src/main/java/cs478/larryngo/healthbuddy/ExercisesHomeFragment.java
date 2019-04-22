@@ -1,27 +1,16 @@
 package cs478.larryngo.healthbuddy;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.CardView;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
-import android.widget.Toast;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class ExercisesHomeActivity extends Fragment implements View.OnClickListener {
+public class ExercisesHomeFragment extends Fragment implements View.OnClickListener {
 
     private final String TAG = "Exercises Home";
     private CardView cv_chest, cv_shoulders, cv_arms, cv_legs;
@@ -83,8 +72,8 @@ public class ExercisesHomeActivity extends Fragment implements View.OnClickListe
         }
         //fragment.setArguments(bundle);
 
-        MainActivity.fm.beginTransaction().replace(R.id.fragment_container,
-                new ExercisesViewActivity()).addToBackStack(null).commit();
+        MainActivity.fm.beginTransaction().setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_left, R.anim.slide_in_left, R.anim.slide_out_right)
+                .replace(R.id.fragment_container, new ExercisesViewFragment()).addToBackStack(null).commit();
 
 
     }

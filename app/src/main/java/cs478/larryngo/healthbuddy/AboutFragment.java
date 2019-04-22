@@ -16,7 +16,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AboutActivity extends Fragment{
+public class AboutFragment extends Fragment{
 
     private final String TAG = "About";
     private DrawerLayout drawerLayout;

@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ExercisesInfoActivity extends Fragment {
+public class ExercisesInfoFragment extends ExercisesViewFragment {
 
     private final String TAG = "Exercises Info";
     private ImageView iv_exercise;
@@ -39,11 +38,11 @@ public class ExercisesInfoActivity extends Fragment {
         tv_instructions = (TextView) view.findViewById(R.id.exercises_info_instructions);
         button_website = (Button) view.findViewById(R.id.exercises_info_learnmore);
 
-        iv_exercise.setImageResource(ExercisesViewActivity.EXTRA_EXERCISE_INFO_IMAGE);
-        text_header = ExercisesViewActivity.EXTRA_EXERCISE_INFO_HEADER;
-        text_difficulty = ExercisesViewActivity.EXTRA_EXERCISE_INFO_DIFFICULTY;
-        text_instructions = ExercisesViewActivity.EXTRA_EXERCISE_INFO_INSTRUCTIONS;
-        text_website = ExercisesViewActivity.EXTRA_EXERCISE_INFO_WEBSITE;
+        iv_exercise.setImageResource(ExercisesViewFragment.EXTRA_EXERCISE_INFO_IMAGE);
+        text_header = ExercisesViewFragment.EXTRA_EXERCISE_INFO_HEADER;
+        text_difficulty = ExercisesViewFragment.EXTRA_EXERCISE_INFO_DIFFICULTY;
+        text_instructions = ExercisesViewFragment.EXTRA_EXERCISE_INFO_INSTRUCTIONS;
+        text_website = ExercisesViewFragment.EXTRA_EXERCISE_INFO_WEBSITE;
 
         tv_header.setText(text_header);
         tv_difficulty.setText(text_difficulty);
