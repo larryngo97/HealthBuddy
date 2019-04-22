@@ -19,7 +19,9 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <include layout="@layout/app_bar" />
+
         </LinearLayout>
 
         <TextView
@@ -28,7 +30,7 @@
             android:layout_height="80dp"
             android:fontFamily="sans-serif-light"
             android:gravity="center_horizontal"
-            android:text="achievements_header"
+            android:text="Achievements"
             android:textSize="36sp" />
 
     </LinearLayout>
