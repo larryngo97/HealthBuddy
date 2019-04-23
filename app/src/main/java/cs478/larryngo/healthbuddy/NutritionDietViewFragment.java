@@ -1,6 +1,7 @@
 package cs478.larryngo.healthbuddy;
 
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -8,7 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class DietViewActivity extends DrawerActivity {
+public class NutritionDietViewFragment extends AppCompatActivity {
 
     private final String TAG = "Diet View";
 

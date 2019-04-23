@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,48 +14,20 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-
-            <TextView
-                android:id="@+id/nutrition_header"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-
-                android:background="@color/color_lightgray"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center_horizontal"
-                android:padding="10dp"
-                android:text="NUTRITION OVERVIEW"
-                android:textSize="24dp" />
-
-            <LinearLayout
-                android:id="@+id/nutrition_onboard"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_below="@+id/nutrition_header"
-                android:background="@color/color_magenta"
-                android:gravity="center"
-                android:orientation="vertical">
-
-            </LinearLayout>
-
-            <android.support.v4.view.ViewPager
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/nutrition_onboard">
-
-            </android.support.v4.view.ViewPager>
-
             <ProgressBar
                 android:id="@+id/nutrition_progressbar_meter"
                 style="?android:progressBarStyleHorizontal"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_below="@+id/nutrition_onboard"
-                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/nutrition_viewPager"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="88dp"
+                android:layout_marginLeft="88dp"
                 android:layout_marginTop="5dp"
                 android:progress="80"
-                android:rotation="-90"
-                android:progressDrawable="@drawable/progress_bar_circle" />
+                android:progressDrawable="@drawable/progress_bar_circle"
+                android:rotation="-90" />
 
             <TextView
                 android:id="@+id/nutrition_progressbar_percentage"
@@ -76,26 +49,23 @@
                 android:layout_width="220dp"
                 android:layout_height="52dp"
                 android:layout_below="@+id/nutrition_progressbar_meter"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="0dp"
+                android:layout_marginStart="-47dp"
+                android:layout_marginLeft="-47dp"
+                android:layout_marginTop="-91dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
-                android:layout_toStartOf="@+id/nutrition_graph"
-                android:layout_toLeftOf="@+id/nutrition_graph"
+                android:layout_toEndOf="@+id/nutrition_progressbar_meter"
+                android:layout_toRightOf="@+id/nutrition_progressbar_meter"
                 android:gravity="center_horizontal"
                 android:text="calories count"
                 android:textSize="16sp" />
 
             <ImageView
                 android:id="@+id/nutrition_graph"
-                android:layout_width="275dp"
-                android:layout_height="175dp"
-                android:layout_below="@+id/nutrition_onboard"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@+id/nutrition_progressbar_meter"
-                android:layout_toRightOf="@+id/nutrition_progressbar_meter"
+                android:layout_width="match_parent"
+                android:layout_height="238dp"
+                android:layout_below="@+id/nutrition_progressbar_meter"
+                android:layout_marginTop="4dp"
                 android:src="@drawable/nutrition_graph" />
 
 
@@ -122,26 +92,26 @@
                 android:layout_marginEnd="160dp"
                 android:layout_marginRight="160dp"
                 android:background="@color/color_lightblue"
-                android:text="Diets" />
+                android:text="Add" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="382dp"
+                android:layout_below="@+id/nutrition_button_add"
+
                 android:background="@color/color_darkgreen"></View>
 
             <View
                 android:layout_width="2dp"
                 android:layout_height="370dp"
+                android:layout_below="@+id/nutrition_button_add"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginStart="202dp"
                 android:layout_marginLeft="202dp"
-                android:layout_marginTop="361dp"
+
                 android:layout_marginEnd="207dp"
                 android:layout_marginRight="207dp"
                 android:layout_marginBottom="10dp"
@@ -150,4 +120,4 @@
 
         </RelativeLayout>
     </ScrollView>
-</RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>

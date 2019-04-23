@@ -87,7 +87,7 @@ public class DrawerActivity extends AppCompatActivity
                 fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_nutrition:
-                fragment = new NutritionFragment();
+                fragment = new NutritionFoodFragment();
                 fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 break;
             case R.id.nav_achievements:

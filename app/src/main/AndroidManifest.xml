@@ -60,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NutritionFragment"
+            android:name=".NutritionFoodFragment"
             android:label="Nutrition"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -68,7 +68,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DietHomeActivity"
+            android:name=".NutritionDietFragment"
             android:label="Diets"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
@@ -76,7 +76,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DietViewActivity"
+            android:name=".NutritionDietViewFragment"
             android:label="Diets"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
