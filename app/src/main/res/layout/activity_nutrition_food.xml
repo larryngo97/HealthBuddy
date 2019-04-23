@@ -88,7 +88,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_below="@+id/nutrition_button_add"
-                android:background="@color/color_darkgreen"></View>
+                android:background="@color/color_darkgreen">
+
+            </View>
 
             <View
                 android:layout_width="2dp"

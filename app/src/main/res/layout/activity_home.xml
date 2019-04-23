@@ -1,7 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/color_lightblue">
+
+    <TextView
+        android:id="@+id/home_header_welcome"
+        android:gravity="center"
+        android:textColor="@color/color_white"
+        android:background="@color/color_crimson"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:text="Welcome back, Larry!" />
+
+    <RelativeLayout
+        android:id="@+id/home_layer1"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/home_header_welcome">
+
+        <ImageView
+            android:id="@+id/home_icon_profile"
+            android:layout_width="114dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="15dp"
+            app:srcCompat="@mipmap/icon_userprofile" />
+
+        <TextView
+            android:id="@+id/home_statistics"
+            android:layout_width="269dp"
+            android:layout_height="112dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginTop="15dp"
+            android:layout_toEndOf="@+id/home_icon_profile"
+            android:layout_toRightOf="@+id/home_icon_profile"
+            android:text="HOME_STATISTICS" />
+
+        <TextView
+            android:id="@+id/home_text_profilename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/home_icon_profile"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="43dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="3dp"
+            android:text="Larry Ngo" />
+
+        <View
+            android:id="@+id/home_divider1"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/color_crimson">
+        </View>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_layer2"
+        android:background="@color/color_lightgray"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_below="@+id/home_layer1">
+
+
+        <TextView
+            android:id="@+id/home_achievements_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="146dp"
+            android:layout_marginLeft="146dp"
+            android:layout_marginEnd="153dp"
+            android:layout_marginRight="153dp"
+            android:gravity="center"
+            android:text="Achievements"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/home_achievements_row"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_achievements_header"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:clipToPadding="false"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/home_achievements1"
+                app:cardBackgroundColor="@color/color_purple"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_margin="5dp"
+                android:background="@color/color_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/ic_circle_lightblue"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_directions_run_white_24dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/color_lightgray"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Marathon Runner"
+                        android:textColor="@color/color_white"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/home_achievements1_description"
+                        android:textColor="@color/color_white"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Run 5 miles"/>
+
+                    <ProgressBar
+                        android:id="@+id/home_achievements1_progress"
+                        android:layout_marginTop="5dp"
+                        android:layout_gravity="center"
+                        android:progress="75"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="80dp"
+                        android:layout_height="10dp" />
+
+                    <TextView
+                        android:id="@+id/home_achievements1_progress_text"
+                        android:textColor="@color/color_white"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.75 / 5"/>
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/home_achievements2"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
+                android:background="@color/color_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_circle_red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_directions_run_white_24dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/color_lightgray"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Marathon Runner"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/home_achievements3"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_margin="5dp"
+                android:background="@color/color_red"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/ic_circle_red"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_directions_run_white_24dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_margin="10dp"
+                        android:background="@color/color_lightgray"></View>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Marathon Runner"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
