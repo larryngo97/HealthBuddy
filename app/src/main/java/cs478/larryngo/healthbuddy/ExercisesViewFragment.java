@@ -1,6 +1,5 @@
 package cs478.larryngo.healthbuddy;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -45,7 +43,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
         KEY_USER_SELECTION = ExercisesHomeFragment.EXTRA_EXERCISE_SELECTION;
 
-        rl_background = (RelativeLayout) view.findViewById(R.id.exercises_view_bg);
+        rl_background = view.findViewById(R.id.exercises_view_bg);
         Integer bg_image = ExercisesHomeFragment.exercise_backgrounds.get(EXTRA_EXERCISE_SELECTION - 1);
         rl_background.setBackgroundResource(bg_image);
 
@@ -138,7 +136,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
                 break;
             case 4: //legs
                 exercise_names.add("Squats");
-                exercise_images.add(R.drawable.gif_squats_150x150);
+                exercise_images.add(R.drawable.gif_newsquat);
                 exercise_difficulty.add("DIFFICULTY: 2/5");
                 exercise_instructions.add(
                         "1. Plant your feet on the ground.\n\n" +
