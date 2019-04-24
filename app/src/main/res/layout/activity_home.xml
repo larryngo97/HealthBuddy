@@ -513,7 +513,7 @@ Minutes worked out: 48 minutes"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center"
-                                    android:text="Run over 20mph"
+                                    android:text="Run over 15mph"
                                     android:textColor="@color/color_white" />
 
                             </LinearLayout>
