@@ -53,7 +53,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
             case 1: //chest
                 exercise_names.add("Bench Press");
                 exercise_images.add(R.drawable.gif_benchpress_150x150);
-                exercise_difficulty.add("DIFFICULTY: ****");
+                exercise_difficulty.add("DIFFICULTY: 4/5");
                 exercise_instructions.add(
                         "1. Begin by lying flat on the bench, with your body in a natural and relaxed position.\n\n" +
                                 "2. Put your arms straight out to either side of you, and then bend your elbows, bringing your hands up to touch the bar.\n\n" +
@@ -78,7 +78,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
             case 2: //shoulder
                 exercise_names.add("Shoulder Press");
                 exercise_images.add(R.drawable.gif_shoulderpress_150x150);
-                exercise_difficulty.add("DIFFICULTY: ***");
+                exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Stand up behind the bar.\n\n" +
                                 "2. Pick up the bar.\n\n" +
@@ -90,7 +90,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
                 exercise_names.add("Side Laterals");
                 exercise_images.add(R.drawable.gif_side_laterals_150x150);
-                exercise_difficulty.add("DIFFICULTY: ***");
+                exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Choose your weights.\n\n" +
                                 "2. Stand or sit with a dumbbell in each hand.\n\n" +
@@ -105,7 +105,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
             case 3: //arms
                 exercise_names.add("Dumbbell Curl");
                 exercise_images.add(R.drawable.gif_dumbbellcurl_150x150);
-                exercise_difficulty.add("DIFFICULTY: ***");
+                exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Position your feet.\n\n" +
                                 "2. Pick up the dumbbells.\n\n" +
@@ -121,7 +121,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
                 exercise_names.add("Seated Dumbbell Press");
                 exercise_images.add(R.drawable.gif_seated_dumbell_press_150x150);
-                exercise_difficulty.add("DIFFICULTY: ***");
+                exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Lie on a flat bench.\n\n" +
                                 "2. Raise the dumbbells to your sides.\n\n" +
@@ -132,7 +132,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
             case 4: //legs
                 exercise_names.add("Squats");
                 exercise_images.add(R.drawable.gif_squats_150x150);
-                exercise_difficulty.add("DIFFICULTY: **");
+                exercise_difficulty.add("DIFFICULTY: 2/5");
                 exercise_instructions.add(
                         "1. Plant your feet on the ground.\n\n" +
                                 "2. Bend your knees.\n\n" +
@@ -141,7 +141,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
                 exercise_names.add("Lunges");
                 exercise_images.add(R.drawable.gif_lunges_150x150);
-                exercise_difficulty.add("DIFFICULTY: *");
+                exercise_difficulty.add("DIFFICULTY: 1/5");
                 exercise_instructions.add(
                         "1. Start in a standing position.\n\n" +
                                 "2. Take a big step forward with your right leg.\n\n" +
