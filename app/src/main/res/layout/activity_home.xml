@@ -4,17 +4,24 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_lightblue">
+    android:background="@drawable/main_bg">
 
     <TextView
         android:id="@+id/home_header_welcome"
-        android:gravity="center"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="left"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="Welcome Back, Larry!"
         android:textColor="@color/color_white"
-        android:background="@color/color_crimson"
-        android:textSize="18sp"
-        android:layout_width="match_parent"
-        android:layout_height="36dp"
-        android:text="Welcome back, Larry!" />
+        android:textSize="32sp" />
 
     <RelativeLayout
         android:id="@+id/home_layer1"
@@ -42,7 +49,14 @@
             android:layout_marginTop="15dp"
             android:layout_toEndOf="@+id/home_icon_profile"
             android:layout_toRightOf="@+id/home_icon_profile"
-            android:text="HOME_STATISTICS" />
+            android:fontFamily="@font/roboto_light"
+            android:textSize="18sp"
+            android:text="Today's Summary:
+Total Calories: 0/2000 (0.00%)
+Average heart rate: 89 BPM
+Current Weight: 120 lbs
+Minutes worked out: 48 minutes"
+            android:textColor="@color/color_white" />
 
         <TextView
             android:id="@+id/home_text_profilename"
@@ -51,23 +65,33 @@
             android:layout_below="@+id/home_icon_profile"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
-            android:layout_marginStart="43dp"
-            android:layout_marginLeft="43dp"
+            android:layout_marginStart="34dp"
+            android:layout_marginLeft="34dp"
             android:layout_marginTop="3dp"
-            android:text="Larry Ngo" />
+            android:fontFamily="@font/roboto_light"
+            android:text="Larry Ngo"
+            android:textColor="@color/color_white"
+            android:textSize="18sp" />
 
         <View
             android:id="@+id/home_divider1"
-            android:layout_alignParentBottom="true"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="3dp"
-            android:background="@color/color_crimson">
-        </View>
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="31dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/color_lightblue"></View>
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/home_layer2"
-        android:background="@color/color_lightgray"
         android:layout_width="match_parent"
         android:layout_height="175dp"
         android:layout_below="@+id/home_layer1">
@@ -75,19 +99,20 @@
 
         <TextView
             android:id="@+id/home_achievements_header"
-            android:layout_width="wrap_content"
+            android:layout_width="163dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginStart="146dp"
-            android:layout_marginLeft="146dp"
-            android:layout_marginEnd="153dp"
-            android:layout_marginRight="153dp"
+            android:layout_marginStart="126dp"
+            android:layout_marginLeft="126dp"
+            android:layout_marginEnd="122dp"
+            android:layout_marginRight="122dp"
             android:gravity="center"
             android:text="Achievements"
-            android:textSize="18sp" />
+            android:textColor="@color/color_white"
+            android:textSize="24sp" />
 
         <LinearLayout
             android:id="@+id/home_achievements_row"
@@ -150,7 +175,6 @@
 
                     <ProgressBar
                         android:id="@+id/home_achievements1_progress"
-                        android:layout_marginTop="5dp"
                         android:layout_gravity="center"
                         android:progress="75"
                         style="?android:attr/progressBarStyleHorizontal"
@@ -163,7 +187,7 @@
                         android:layout_gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="3.75 / 5"/>
+                        android:text="3.75 / 5.00"/>
 
                 </LinearLayout>
             </android.support.v7.widget.CardView>
