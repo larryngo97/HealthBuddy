@@ -51,21 +51,21 @@
 
                 <TextView
                     android:id="@+id/home_statistics"
-                    android:layout_width="269dp"
-                    android:layout_height="112dp"
+                    android:layout_width="277dp"
+                    android:layout_height="123dp"
                     android:layout_marginStart="4dp"
                     android:layout_marginLeft="4dp"
                     android:layout_marginTop="15dp"
                     android:layout_toEndOf="@+id/home_icon_profile"
                     android:layout_toRightOf="@+id/home_icon_profile"
                     android:fontFamily="@font/roboto_light"
-                    android:textSize="18sp"
                     android:text="Today's Summary:
 Total Calories: 0/2000 (0.00%)
 Average heart rate: 89 BPM
 Current Weight: 120 lbs
 Minutes worked out: 48 minutes"
-                    android:textColor="@color/color_white" />
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp" />
 
                 <TextView
                     android:id="@+id/home_text_profilename"
@@ -95,8 +95,8 @@ Minutes worked out: 48 minutes"
                     android:layout_marginLeft="31dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginBottom="2dp"
-                    android:background="@color/color_lightblue"></View>
+                    android:layout_marginTop="25dp"
+                    android:background="@color/color_lightblue"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -388,7 +388,7 @@ Minutes worked out: 48 minutes"
                                     android:id="@+id/home_goals4_description"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
+                                    android:gravity="center"
                                     android:text="Workout for 60 mins"
                                     android:textColor="@color/color_white" />
 
@@ -428,6 +428,7 @@ Minutes worked out: 48 minutes"
                     android:layout_marginEnd="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
                     android:background="@color/color_lightblue"></View>
             </RelativeLayout>
 
@@ -440,16 +441,16 @@ Minutes worked out: 48 minutes"
 
                 <TextView
                     android:id="@+id/home_achievements_header"
-                    android:layout_width="163dp"
+                    android:layout_width="248dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginStart="126dp"
-                    android:layout_marginLeft="126dp"
-                    android:layout_marginEnd="122dp"
-                    android:layout_marginRight="122dp"
+                    android:layout_marginStart="88dp"
+                    android:layout_marginLeft="88dp"
+                    android:layout_marginEnd="75dp"
+                    android:layout_marginRight="75dp"
                     android:gravity="center"
                     android:text="Achievements"
                     android:textColor="@color/color_white"
@@ -692,6 +693,7 @@ Minutes worked out: 48 minutes"
                     android:layout_marginEnd="30dp"
                     android:layout_marginRight="30dp"
                     android:layout_marginBottom="2dp"
+                    android:layout_marginTop="5dp"
                     android:background="@color/color_lightblue"></View>
             </RelativeLayout>
         </RelativeLayout>
