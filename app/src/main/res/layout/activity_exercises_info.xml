@@ -107,7 +107,7 @@
                 android:layout_marginTop="15dp"
                 android:layout_marginEnd="0dp"
                 android:layout_marginRight="0dp"
-                android:background="@color/color_hotpink"
+                android:background="@color/color_lightblue"
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:text="INSTRUCTIONS"
