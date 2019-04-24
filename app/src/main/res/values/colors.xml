@@ -21,4 +21,6 @@
     <color name="color_redorange">#ff6400</color>
     <color name="color_yellow">#FFFF00</color>
     <color name="color_neongreen">#39ff14</color>
+    <color name="color_black_transparent">#80000000</color>
+    <color name="color_lightblue_transparent">#E612c7e3</color>
 </resources>

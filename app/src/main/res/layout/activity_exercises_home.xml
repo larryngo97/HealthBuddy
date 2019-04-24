@@ -2,8 +2,10 @@
 
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/exercise_bg">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -15,14 +17,16 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/exercises_home_intro"
-                android:background="@color/color_lightgray"
+                android:id="@+id/exercises_home_header"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"
+                android:background="@color/color_black_transparent"
                 android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
-                android:text="What body part to work out?"
-                android:textSize="24dp" />
+                android:text="Select a body part to work out"
+                android:textColor="@color/color_white"
+                android:textSize="36dp" />
 
             <LinearLayout
                 android:clipToPadding="false"
@@ -30,7 +34,7 @@
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="5dp">
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/exercises_cv_chest"
@@ -39,7 +43,8 @@
                     android:focusable="true"
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:layout_margin="10dp">
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/color_lightblue_transparent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -62,13 +67,15 @@
                             android:background="@color/color_lightgray"
                             android:layout_margin="10dp">
                         </View>
+
                         <TextView
-                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/roboto_light"
                             android:text="Chest"
-                            android:textSize="18sp"/>
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
 
                         <TextView
@@ -87,7 +94,7 @@
                     android:layout_margin="10dp"
                     android:clickable="true"
                     android:focusable="true"
-                    android:foreground="?android:attr/selectableItemBackground">
+                    app:cardBackgroundColor="@color/color_lightblue_transparent">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -115,9 +122,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/roboto_light"
                             android:text="Shoulders"
-                            android:textStyle="bold"
-                            android:textSize="18sp"/>
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
 
                         <TextView
@@ -139,7 +147,7 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/exercises_cv_arms"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/color_lightblue_transparent"
                     android:clickable="true"
                     android:focusable="true"
                     android:layout_width="160dp"
@@ -167,13 +175,15 @@
                             android:background="@color/color_lightgray"
                             android:layout_margin="10dp">
                         </View>
+
                         <TextView
-                            android:layout_gravity="center_horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textStyle="bold"
+                            android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/roboto_light"
                             android:text="Arms"
-                            android:textSize="18sp"/>
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
 
                         <TextView
@@ -187,7 +197,7 @@
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/exercises_cv_legs"
-                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/color_lightblue_transparent"
                     android:clickable="true"
                     android:focusable="true"
                     android:layout_width="160dp"
@@ -205,7 +215,7 @@
                             android:layout_height="70dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/ic_circle_lightblue"
+                            android:background="@drawable/ic_circle_lightgray"
                             android:padding="10dp"
                             android:src="@drawable/ic_legs" />
 
@@ -221,9 +231,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
+                            android:fontFamily="@font/roboto_light"
                             android:text="Legs"
-                            android:textStyle="bold"
-                            android:textSize="18sp"/>
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
 
 
                         <TextView
