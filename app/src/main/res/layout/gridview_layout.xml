@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_white">
+    android:background="@color/color_black_transparent">
 
 
     <pl.droidsonroids.gif.GifImageView
@@ -29,8 +29,9 @@
         android:layout_marginRight="5dp"
         android:layout_toStartOf="@+id/gv_item_image"
         android:layout_toLeftOf="@+id/gv_item_image"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/roboto_light"
         android:gravity="center"
+        android:textColor="@color/color_white"
         android:text="gv_exercise_name"
         android:textSize="24sp"
         tools:layout_editor_absoluteX="0dp"
@@ -41,6 +42,6 @@
         android:layout_height="2dp"
         android:layout_below="@+id/gv_item_image"
         android:layout_marginTop="-150dp"
-        android:background="@color/color_darkgreen"></View>
+        android:background="@color/color_lightblue_transparent"></View>
 
 </RelativeLayout>

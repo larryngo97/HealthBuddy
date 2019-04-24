@@ -17,7 +17,7 @@ public class MainHomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.activity_home, container, false);
         TextView tv_layer1_statistics = (TextView) view.findViewById(R.id.home_statistics);
         tv_layer1_statistics.setText(
-                "       Today's Summary\n" +
+                "     -- Today's Summary -- \n" +
                 "Total Calories: 0/2000 (0.00%)\n" +
                 "Average heart rate: 89 BPM\n" +
                 "Current Weight: 120 lbs\n" +

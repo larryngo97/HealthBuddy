@@ -10,13 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ExercisesHomeFragment extends Fragment implements View.OnClickListener {
 
     private final String TAG = "Exercises Home";
     private CardView cv_chest, cv_shoulders, cv_arms, cv_legs;
     protected static String EXTRA_EXERCISE_HEADER = "NULL";
     protected static int EXTRA_EXERCISE_SELECTION = 0;
-
+    protected static ArrayList<Integer> exercise_backgrounds = new ArrayList<Integer>(Arrays.asList(
+            R.drawable.bg_chest, R.drawable.bg_shoulders, R.drawable.bg_arms, R.drawable.bg_legs));
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
