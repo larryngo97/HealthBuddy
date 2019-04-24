@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,276 +7,695 @@
     android:layout_height="match_parent"
     android:background="@drawable/main_bg">
 
-    <TextView
-        android:id="@+id/home_header_welcome"
-        android:layout_width="384dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginStart="27dp"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/roboto_medium"
-        android:gravity="left"
-        android:maxLines="2"
-        android:singleLine="false"
-        android:text="Welcome Back, Larry!"
-        android:textColor="@color/color_white"
-        android:textSize="32sp" />
-
-    <RelativeLayout
-        android:id="@+id/home_layer1"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@+id/home_header_welcome">
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/home_icon_profile"
-            android:layout_width="114dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="15dp"
-            app:srcCompat="@mipmap/icon_userprofile" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/home_statistics"
-            android:layout_width="269dp"
-            android:layout_height="112dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="15dp"
-            android:layout_toEndOf="@+id/home_icon_profile"
-            android:layout_toRightOf="@+id/home_icon_profile"
-            android:fontFamily="@font/roboto_light"
-            android:textSize="18sp"
-            android:text="Today's Summary:
+            <TextView
+                android:id="@+id/home_header_welcome"
+                android:layout_width="384dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="27dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="left"
+                android:maxLines="2"
+                android:singleLine="false"
+                android:text="Welcome Back, Larry!"
+                android:textColor="@color/color_white"
+                android:textSize="32sp" />
+
+            <RelativeLayout
+                android:id="@+id/home_layer1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/home_header_welcome">
+
+                <ImageView
+                    android:id="@+id/home_icon_profile"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    app:srcCompat="@mipmap/icon_userprofile" />
+
+                <TextView
+                    android:id="@+id/home_statistics"
+                    android:layout_width="269dp"
+                    android:layout_height="112dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toEndOf="@+id/home_icon_profile"
+                    android:layout_toRightOf="@+id/home_icon_profile"
+                    android:fontFamily="@font/roboto_light"
+                    android:textSize="18sp"
+                    android:text="Today's Summary:
 Total Calories: 0/2000 (0.00%)
 Average heart rate: 89 BPM
 Current Weight: 120 lbs
 Minutes worked out: 48 minutes"
-            android:textColor="@color/color_white" />
+                    android:textColor="@color/color_white" />
 
-        <TextView
-            android:id="@+id/home_text_profilename"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/home_icon_profile"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_marginStart="34dp"
-            android:layout_marginLeft="34dp"
-            android:layout_marginTop="3dp"
-            android:fontFamily="@font/roboto_light"
-            android:text="Larry Ngo"
-            android:textColor="@color/color_white"
-            android:textSize="18sp" />
+                <TextView
+                    android:id="@+id/home_text_profilename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_icon_profile"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="Larry Ngo"
+                    android:textColor="@color/color_white"
+                    android:textSize="18sp" />
 
-        <View
-            android:id="@+id/home_divider1"
-            android:layout_width="350dp"
-            android:layout_height="3dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="31dp"
-            android:layout_marginLeft="31dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginBottom="2dp"
-            android:background="@color/color_lightblue"></View>
-    </RelativeLayout>
+                <View
+                    android:id="@+id/home_divider1"
+                    android:layout_width="350dp"
+                    android:layout_height="3dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/color_lightblue"></View>
+            </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/home_layer2"
-        android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:layout_below="@+id/home_layer1">
+            <RelativeLayout
+                android:id="@+id/home_layer2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/home_layer1">
 
 
-        <TextView
-            android:id="@+id/home_achievements_header"
-            android:layout_width="163dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginStart="126dp"
-            android:layout_marginLeft="126dp"
-            android:layout_marginEnd="122dp"
-            android:layout_marginRight="122dp"
-            android:gravity="center"
-            android:text="Achievements"
-            android:textColor="@color/color_white"
-            android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/home_goals_header"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginEnd="122dp"
+                    android:layout_marginRight="122dp"
+                    android:gravity="center"
+                    android:text="Today's Goals"
+                    android:textColor="@color/color_white"
+                    android:textSize="24sp" />
 
-        <LinearLayout
-            android:id="@+id/home_achievements_row"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/home_achievements_header"
-            android:layout_gravity="center"
-            android:layout_marginTop="2dp"
-            android:clipToPadding="false"
-            android:orientation="horizontal">
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_goals_header">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/home_achievements1"
-                app:cardBackgroundColor="@color/color_purple"
-                android:layout_width="160dp"
-                android:layout_height="160dp"
-                android:layout_margin="5dp"
-                android:background="@color/color_red"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="5dp"
-                        android:background="@drawable/ic_circle_lightblue"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_directions_run_white_24dp" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_margin="5dp"
-                        android:background="@color/color_lightgray"></View>
-
-                    <TextView
+                    <LinearLayout
+                        android:id="@+id/home_goals_row"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Marathon Runner"
-                        android:textColor="@color/color_white"
-                        android:textSize="15sp"
-                        android:textStyle="bold" />
+                        android:layout_below="@id/home_goals_header"
+                        android:layout_marginTop="2dp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/home_achievements1_description"
-                        android:textColor="@color/color_white"
-                        android:layout_gravity="center"
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_goals1"
+                            android:layout_width="130dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/color_red"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/goals_runner" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Marathon Runner"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/home_goals1_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Run 5 miles"
+                                    android:textColor="@color/color_white" />
+
+                                <ProgressBar
+                                    android:id="@+id/home_goals1_progress"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="80dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center"
+                                    android:progress="75" />
+
+                                <TextView
+                                    android:id="@+id/home_goals1_progress_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="3.75 / 5.00"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_goals2"
+                            android:layout_width="130dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/goals_apple" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Fruity Loops"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/home_goals2_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Eat 3 fruits"
+                                    android:textColor="@color/color_white" />
+
+                                <ProgressBar
+                                    android:id="@+id/home_goals2_progress"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="80dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center"
+                                    android:progress="33" />
+
+                                <TextView
+                                    android:id="@+id/home_goals2_progress_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="1 / 3"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_goals3"
+                            android:layout_width="130dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/color_red"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/goals_water" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Hydro Pumper"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/home_goals3_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Drink 2L of water"
+                                    android:textColor="@color/color_white" />
+
+                                <ProgressBar
+                                    android:id="@+id/home_goals3_progress"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="80dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center"
+                                    android:progress="50" />
+
+                                <TextView
+                                    android:id="@+id/home_goals3_progress_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="1.00 / 2.00"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_goals4"
+                            android:layout_width="130dp"
+                            android:layout_height="140dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/color_red"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/goals_dumbbell" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Gym Rat"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/home_goals4_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Workout for 60 mins"
+                                    android:textColor="@color/color_white" />
+
+                                <ProgressBar
+                                    android:id="@+id/home_goals4_progress"
+                                    style="?android:attr/progressBarStyleHorizontal"
+                                    android:layout_width="80dp"
+                                    android:layout_height="10dp"
+                                    android:layout_gravity="center"
+                                    android:progress="25" />
+
+                                <TextView
+                                    android:id="@+id/home_goals4_progress_text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="15 / 60"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="12sp" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:id="@+id/home_divider2"
+                    android:layout_width="350dp"
+                    android:layout_height="3dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/color_lightblue"></View>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_layer3"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/home_layer2">
+
+
+                <TextView
+                    android:id="@+id/home_achievements_header"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="126dp"
+                    android:layout_marginLeft="126dp"
+                    android:layout_marginEnd="122dp"
+                    android:layout_marginRight="122dp"
+                    android:gravity="center"
+                    android:text="Achievements"
+                    android:textColor="@color/color_white"
+                    android:textSize="24sp" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/home_achievements_header">
+
+                    <LinearLayout
+                        android:id="@+id/home_achievements_row"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Run 5 miles"/>
+                        android:layout_marginTop="2dp"
+                        android:clipToPadding="false"
+                        android:orientation="horizontal">
 
-                    <ProgressBar
-                        android:id="@+id/home_achievements1_progress"
-                        android:layout_gravity="center"
-                        android:progress="75"
-                        style="?android:attr/progressBarStyleHorizontal"
-                        android:layout_width="80dp"
-                        android:layout_height="10dp" />
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_achievements1"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_margin="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
 
-                    <TextView
-                        android:id="@+id/home_achievements1_progress_text"
-                        android:textColor="@color/color_white"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="3.75 / 5.00"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
 
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/achievements_cheetah" />
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/home_achievements2"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="5dp"
-                android:background="@color/color_red"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Cheetah"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/ic_circle_red"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_directions_run_white_24dp" />
+                                <TextView
+                                    android:id="@+id/home_achievements1_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="Run over 20mph"
+                                    android:textColor="@color/color_white" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/color_lightgray"></View>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Marathon Runner"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_achievements2"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_margin="5dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
 
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/home_achievements3"
-                android:layout_width="120dp"
-                android:layout_height="120dp"
-                android:layout_margin="5dp"
-                android:background="@color/color_red"
-                android:clickable="true"
-                android:focusable="true"
-                android:foreground="?android:attr/selectableItemBackground">
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/achievements_incinerator" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:orientation="vertical">
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
 
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:background="@drawable/ic_circle_red"
-                        android:padding="5dp"
-                        android:src="@drawable/ic_directions_run_white_24dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Incinerator"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="2dp"
-                        android:layout_margin="10dp"
-                        android:background="@color/color_lightgray"></View>
+                                <TextView
+                                    android:id="@+id/home_achievements2_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:text="Lose over 10 lbs. in 1 month"
+                                    android:textColor="@color/color_white" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:text="Marathon Runner"
-                        android:textSize="12sp"
-                        android:textStyle="bold" />
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
 
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
-        </LinearLayout>
-    </RelativeLayout>
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_achievements3"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/color_red"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/achievements_strength" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="Powerhouse"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/home_achievements3_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Workout at least 4 times in a week"
+                                    android:textColor="@color/color_white" />
+
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/home_achievements4"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_margin="5dp"
+                            android:background="@color/color_red"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardBackgroundColor="@android:color/transparent">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/ic_circle_lightblue"
+                                    android:padding="5dp"
+                                    android:src="@drawable/achievements_mountain" />
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_margin="5dp"
+                                    android:background="@color/color_lightgray"></View>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:text="The Mountain"
+                                    android:textColor="@color/color_white"
+                                    android:textSize="15sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/home_achievements4_description"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="Benchpress over 150 lbs."
+                                    android:textColor="@color/color_white" />
+
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <View
+                    android:id="@+id/home_divider3"
+                    android:layout_width="350dp"
+                    android:layout_height="3dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="31dp"
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@color/color_lightblue"></View>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
 
 </RelativeLayout>
