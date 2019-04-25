@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/main_bg">
+    android:background="@drawable/bg_home">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,74 +13,139 @@
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:id="@+id/home_header_welcome"
-                android:layout_width="384dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="27dp"
-                android:layout_marginLeft="27dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/roboto_medium"
-                android:gravity="left"
-                android:maxLines="2"
-                android:singleLine="false"
-                android:text="Welcome Back, Larry!"
-                android:textColor="@color/color_white"
-                android:textSize="32sp" />
+            android:layout_height="wrap_content"
+            android:background="@color/color_black_transparent">
 
             <RelativeLayout
-                android:id="@+id/home_layer1"
+                android:id="@+id/home_layer_header"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_below="@+id/home_header_welcome">
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/home_header_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="27dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:singleLine="false"
+                    android:text="Welcome Back, Larry!"
+                    android:textColor="@color/color_white"
+                    android:textSize="32sp" />
 
                 <ImageView
                     android:id="@+id/home_icon_profile"
-                    android:layout_width="114dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_width="53dp"
+                    android:layout_height="39dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="9dp"
+                    android:layout_marginRight="9dp"
                     app:srcCompat="@mipmap/icon_userprofile" />
 
-                <TextView
-                    android:id="@+id/home_statistics"
-                    android:layout_width="277dp"
-                    android:layout_height="123dp"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginLeft="4dp"
-                    android:layout_marginTop="15dp"
-                    android:layout_toEndOf="@+id/home_icon_profile"
-                    android:layout_toRightOf="@+id/home_icon_profile"
-                    android:fontFamily="@font/roboto_light"
-                    android:text="Today's Summary:
-Total Calories: 0/2000 (0.00%)
-Average heart rate: 89 BPM
-Current Weight: 120 lbs
-Minutes worked out: 48 minutes"
-                    android:textColor="@color/color_white"
-                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_layer_info"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_below="@+id/home_layer_header">
 
                 <TextView
-                    android:id="@+id/home_text_profilename"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/home_text_date"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/home_icon_profile"
+                    android:layout_toEndOf="@+id/home_icon_weather"
+                    android:layout_toRightOf="@+id/home_icon_weather"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:gravity="center"
+                    android:text="Tuesday, April 30th"
+                    android:textColor="@color/color_white"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/home_icon_weather"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginStart="34dp"
-                    android:layout_marginLeft="34dp"
-                    android:layout_marginTop="3dp"
-                    android:fontFamily="@font/roboto_light"
-                    android:text="Larry Ngo"
-                    android:textColor="@color/color_white"
-                    android:textSize="18sp" />
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@drawable/ic_weather" />
+
+                <TextView
+                    android:id="@+id/home_text_weather"
+                    android:layout_width="120dp"
+                    android:layout_height="21dp"
+                    android:layout_below="@+id/home_icon_weather"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center"
+                    android:text="Partly Cloudy, 56°F"
+                    android:textColor="@color/color_white" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/home_text_date"
+                    android:layout_toEndOf="@+id/home_icon_weather"
+                    android:layout_toRightOf="@+id/home_icon_weather">
+
+                    <ImageView
+                        android:id="@+id/home_icon_scale"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/ic_scale" />
+
+                    <ImageView
+                        android:id="@+id/home_icon_heartbeat"
+                        android:layout_below="@id/home_icon_scale"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginStart="30dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:srcCompat="@drawable/ic_heartbeat" />
+
+                    <TextView
+                        android:id="@+id/home_text_scale"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/home_icon_scale"
+                        android:layout_toRightOf="@+id/home_icon_scale"
+                        android:textSize="24sp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/color_white"
+                        android:text="120 lbs." />
+
+                    <TextView
+                        android:id="@+id/home_text_heartbeat"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/home_text_scale"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toEndOf="@+id/home_icon_heartbeat"
+                        android:layout_toRightOf="@+id/home_icon_heartbeat"
+                        android:gravity="center_vertical"
+                        android:text="89 BPM"
+                        android:textColor="@color/color_white"
+                        android:textSize="24sp" />
+                </RelativeLayout>
 
                 <View
                     android:id="@+id/home_divider1"
@@ -93,17 +158,18 @@ Minutes worked out: 48 minutes"
                     android:layout_alignParentBottom="true"
                     android:layout_marginStart="31dp"
                     android:layout_marginLeft="31dp"
+                    android:layout_marginTop="25dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginRight="30dp"
-                    android:layout_marginTop="25dp"
-                    android:background="@color/color_lightblue"/>
+                    android:background="@color/color_lightblue" />
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/home_layer2"
+                android:id="@+id/home_layer_goals"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_below="@+id/home_layer1">
+                android:layout_below="@+id/home_layer_info">
 
 
                 <TextView
@@ -434,10 +500,10 @@ Minutes worked out: 48 minutes"
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/home_layer3"
+                android:id="@+id/home_layer_achievements"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_below="@+id/home_layer2">
+                android:layout_below="@+id/home_layer_goals">
 
 
                 <TextView
@@ -696,8 +762,19 @@ Minutes worked out: 48 minutes"
                     android:layout_marginRight="30dp"
                     android:layout_marginBottom="2dp"
                     android:layout_marginTop="5dp"
-                    android:background="@color/color_lightblue"></View>
+                    android:background="@color/color_lightblue">
+
+                </View>
             </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/home_layer_summary"
+                android:layout_below="@+id/home_layer_achievements"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+
+            </RelativeLayout>
+
         </RelativeLayout>
     </ScrollView>
 
