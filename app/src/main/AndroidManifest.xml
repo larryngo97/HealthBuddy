@@ -19,62 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".ProfileActivity"
-            android:label="Profile"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".AboutFragment"
-            android:label="About"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ExercisesHomeFragment"
-            android:label="Exercises"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ExercisesViewFragment"
-            android:label="Exercises"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".ExercisesInfoFragment"
-            android:label="Exercises"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".NutritionFoodFragment"
-            android:label="Nutrition"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".NutritionDietFragment"
-            android:label="Diets"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-            </intent-filter>
-        </activity>
+
         <activity
             android:name=".NutritionDietViewFragment"
             android:label="Diets"
@@ -83,15 +28,11 @@
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".AchievementsActivity"
-            android:label="Achievements"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".DrawerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
         </activity>
-        <activity android:name=".DrawerActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"

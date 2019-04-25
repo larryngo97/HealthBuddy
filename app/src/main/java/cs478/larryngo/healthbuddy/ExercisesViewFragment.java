@@ -57,7 +57,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
         {
             case 1: //chest
                 exercise_names.add("Bench Press");
-                exercise_images.add(R.drawable.gif_benchpress_150x150);
+                exercise_images.add(R.drawable.gif_benchpress);
                 exercise_difficulty.add("DIFFICULTY: 4/5");
                 exercise_instructions.add(
                         "1. Begin by lying flat on the bench, with your body in a natural and relaxed position.\n\n" +
@@ -71,7 +71,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
 
                 exercise_names.add("Push-ups");
-                exercise_images.add(R.drawable.gif_pushups_150x150);
+                exercise_images.add(R.drawable.gif_pushups);
                 exercise_difficulty.add("DIFFICULTY: *");
                 exercise_instructions.add(
                         "1. Assume a face-down prone position on the floor.\n\n" +
@@ -82,7 +82,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
                 break;
             case 2: //shoulder
                 exercise_names.add("Shoulder Press");
-                exercise_images.add(R.drawable.gif_shoulderpress_150x150);
+                exercise_images.add(R.drawable.gif_shoulderpress);
                 exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Stand up behind the bar.\n\n" +
@@ -94,7 +94,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
                 exercise_website.add("https://www.wikihow.fitness/Do-Shoulder-Presses");
 
                 exercise_names.add("Side Laterals");
-                exercise_images.add(R.drawable.gif_side_laterals_150x150);
+                exercise_images.add(R.drawable.gif_side_laterals);
                 exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Choose your weights.\n\n" +
@@ -109,7 +109,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
                 break;
             case 3: //arms
                 exercise_names.add("Dumbbell Curl");
-                exercise_images.add(R.drawable.gif_dumbbellcurl_150x150);
+                exercise_images.add(R.drawable.gif_dumbbellcurl);
                 exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Position your feet.\n\n" +
@@ -125,7 +125,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
 
                 exercise_names.add("Seated Dumbbell Press");
-                exercise_images.add(R.drawable.gif_seated_dumbell_press_150x150);
+                exercise_images.add(R.drawable.gif_seated_dumbell_press);
                 exercise_difficulty.add("DIFFICULTY: 3/5");
                 exercise_instructions.add(
                         "1. Lie on a flat bench.\n\n" +
@@ -136,7 +136,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
                 break;
             case 4: //legs
                 exercise_names.add("Squats");
-                exercise_images.add(R.drawable.gif_newsquat);
+                exercise_images.add(R.drawable.gif_squats);
                 exercise_difficulty.add("DIFFICULTY: 2/5");
                 exercise_instructions.add(
                         "1. Plant your feet on the ground.\n\n" +
@@ -145,7 +145,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
                 exercise_website.add("https://www.wikihow.life/Do-a-Squat");
 
                 exercise_names.add("Lunges");
-                exercise_images.add(R.drawable.gif_lunges_150x150);
+                exercise_images.add(R.drawable.gif_lunges);
                 exercise_difficulty.add("DIFFICULTY: 1/5");
                 exercise_instructions.add(
                         "1. Start in a standing position.\n\n" +

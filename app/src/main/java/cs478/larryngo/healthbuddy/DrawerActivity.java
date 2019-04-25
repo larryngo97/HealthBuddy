@@ -50,7 +50,7 @@ public class DrawerActivity extends AppCompatActivity
             @Override
             public void onClick(View v) {
                 //If current activity = the profile activity, then just close the drawer, do not start a new profile activity
-                if(DrawerActivity.this.getClass().getSimpleName().equals(ProfileActivity.class.getSimpleName()))
+                if(DrawerActivity.this.getClass().getSimpleName().equals(ProfileFragment.class.getSimpleName()))
                 {
                     DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout); //finds drawer
                     if (drawer.isDrawerOpen(GravityCompat.START)) //if the drawer is open
@@ -60,7 +60,7 @@ public class DrawerActivity extends AppCompatActivity
                 }
                 else //start profile activity
                 {
-                    Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                    Intent intent = new Intent(getApplicationContext(), ProfileFragment.class);
                     startActivity(intent);
                 }
             }

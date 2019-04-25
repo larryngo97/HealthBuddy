@@ -22,6 +22,7 @@
     <color name="color_yellow">#FFFF00</color>
     <color name="color_neongreen">#39ff14</color>
     <color name="color_black_transparent">#80000000</color>
+    <color name="color_black_transparent2">#BF000000</color>
     <color name="color_lightblue_transparent">#6612c7e3</color>
     <color name="color_crimson_transparent">#80990000</color>
 </resources>

@@ -59,7 +59,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/ic_circle_lightgreen"
+                            android:background="@drawable/ic_circle_lightgray"
                             android:src="@drawable/ic_chest"
                             android:padding="0dp"/>
 
@@ -110,7 +110,7 @@
                             android:layout_height="70dp"
                             android:layout_gravity="center_horizontal"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/ic_circle_lightpink"
+                            android:background="@drawable/ic_circle_lightgray"
                             android:padding="10dp"
                             android:src="@drawable/ic_shoulders" />
 
@@ -170,7 +170,7 @@
                             android:layout_gravity="center_horizontal"
                             android:layout_width="70dp"
                             android:layout_height="70dp"
-                            android:background="@drawable/ic_circle_magenta"
+                            android:background="@drawable/ic_circle_lightgray"
                             android:src="@drawable/ic_arms"
                             android:padding="10dp"/>
 
@@ -257,7 +257,7 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/color_black_transparent">
+                android:background="@color/color_black_transparent2">
 
                 <TextView
                     android:id="@+id/home_tip_header"

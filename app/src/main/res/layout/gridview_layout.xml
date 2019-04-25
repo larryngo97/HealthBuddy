@@ -17,7 +17,7 @@
         android:layout_marginRight="0dp"
         tools:layout_editor_absoluteX="285dp"
         tools:layout_editor_absoluteY="16dp"
-        android:src="@drawable/gif_benchpress_150x150" />
+        android:src="@drawable/gif_benchpress" />
 
     <TextView
         android:id="@+id/gv_item_name"
