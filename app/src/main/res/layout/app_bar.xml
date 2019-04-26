@@ -19,6 +19,9 @@
 
             <ImageView
                 android:id="@+id/app_bar_backarrow"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 app:srcCompat="@drawable/ic_backarrow" />
