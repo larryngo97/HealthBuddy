@@ -43,7 +43,7 @@ public class ExercisesViewFragment extends ExercisesHomeFragment {
 
         KEY_USER_SELECTION = ExercisesHomeFragment.EXTRA_EXERCISE_SELECTION;
 
-        rl_background = view.findViewById(R.id.exercises_view_bg);
+        rl_background = (RelativeLayout) view.findViewById(R.id.exercises_view_bg);
         Integer bg_image = ExercisesHomeFragment.exercise_backgrounds.get(EXTRA_EXERCISE_SELECTION - 1);
         rl_background.setBackgroundResource(bg_image);
 
