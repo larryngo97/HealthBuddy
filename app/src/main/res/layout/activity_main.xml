@@ -19,9 +19,9 @@
 
         <android.support.design.widget.BottomNavigationView
             android:id="@+id/navigation_bottom"
-            app:itemBackground="@color/color_red"
-            app:itemIconTint="@color/bnv_foreground"
-            app:itemTextColor="@color/bnv_foreground"
+            app:itemBackground="@color/color_white"
+            app:itemIconTint="@drawable/botnavbar_colors"
+            app:itemTextColor="@drawable/botnavbar_colors"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

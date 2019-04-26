@@ -7,29 +7,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/bg_home"
+    android:background="@drawable/bg_profile"
     tools:openDrawer="start">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/profile_picture"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
+                android:id="@+id/imageView2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="end"
+                app:srcCompat="@drawable/ic_settings" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_gravity="center"
-                android:layout_marginStart="96dp"
-                android:layout_marginLeft="96dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="93dp"
-                android:layout_marginRight="93dp"
-                android:contentDescription="image for profile"
-                tools:srcCompat="@mipmap/icon_userprofile" />
+                android:id="@+id/profile_picture"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_profile_icon"
+                app:civ_border_width="2dp"
+                app:civ_border_color="@color/color_lightgray"/>
 
             <TextView
                 android:id="@+id/profile_name"
@@ -37,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="107dp"
                 android:layout_marginLeft="107dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginEnd="104dp"
                 android:layout_marginRight="104dp"
                 android:fontFamily="@font/pavanam"
@@ -51,6 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
                 android:fontFamily="@font/josefin_sans"
                 android:gravity="center"
                 android:text="Student"
@@ -58,143 +65,326 @@
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/profile_occupation"
+                android:id="@+id/profile_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:fontFamily="@font/josefin_sans"
                 android:gravity="center"
-                android:text="Student"
+                android:text="April 25th, 2019"
                 android:textColor="@color/color_lightgray"
-                android:textSize="24sp" />
+                android:textSize="36sp" />
+
+            <TextView
+                android:id="@+id/profile_header_exercises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start"
+                android:shadowDx="7"
+                android:shadowDy="6"
+                android:shadowRadius="5"
+                android:text="Exercises"
+                android:textColor="@color/color_white"
+                android:textSize="36sp" />
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/gradient_purple">
+                android:background="@drawable/gradient_pastel3">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:text="Steps"
                         android:textColor="@color/color_white"
-                        android:textSize="18sp"
-                        android:text="Steps" />
+                        android:textSize="18sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
+                        android:text="4280 steps"
                         android:textColor="@color/color_white"
-                        android:textSize="36sp"
-                        android:text="4280 steps"/>
+                        android:textSize="36sp" />
                 </RelativeLayout>
             </FrameLayout>
+
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 android:background="@drawable/gradient_red">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:text="Distance traveled"
                         android:textColor="@color/color_white"
-                        android:textSize="18sp"
-                        android:text="Distance traveled" />
+                        android:textSize="18sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
+                        android:text="2.14 mi"
                         android:textColor="@color/color_white"
-                        android:textSize="36sp"
-                        android:text="2.14 mi"/>
+                        android:textSize="36sp" />
                 </RelativeLayout>
             </FrameLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 android:background="@drawable/gradient_blue">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:text="Workout duration"
                         android:textColor="@color/color_white"
-                        android:textSize="18sp"
-                        android:text="Workout duration" />
+                        android:textSize="18sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
+                        android:text="1 hr 23 mins"
                         android:textColor="@color/color_white"
-                        android:textSize="36sp"
-                        android:text="1 hr 23 mins"/>
+                        android:textSize="36sp" />
                 </RelativeLayout>
             </FrameLayout>
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginEnd="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginLeft="10dp"
                 android:background="@drawable/gradient_orange">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:text="Calories burned"
                         android:textColor="@color/color_white"
-                        android:textSize="18sp"
-                        android:text="Calories burned" />
+                        android:textSize="18sp" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentRight="true"
                         android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
+                        android:text="253 kcal"
                         android:textColor="@color/color_white"
-                        android:textSize="36sp"
-                        android:text="253 kcal"/>
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/profile_header_nutrition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/roboto_bold"
+                android:gravity="start"
+                android:shadowDx="7"
+                android:shadowDy="6"
+                android:shadowRadius="5"
+                android:text="Nutrition"
+                android:textColor="@color/color_white"
+                android:textSize="36sp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gradient_pastel4">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Calories consumed"
+                        android:textColor="@color/color_white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:text="2,073 kcal"
+                        android:textColor="@color/color_white"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gradient_pastel1">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Fats"
+                        android:textColor="@color/color_white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:text="21 g"
+                        android:textColor="@color/color_white"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gradient_purple">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Protein"
+                        android:textColor="@color/color_white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:text="47 g"
+                        android:textColor="@color/color_white"
+                        android:textSize="36sp" />
+                </RelativeLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/gradient_green">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Carbohydrates"
+                        android:textColor="@color/color_white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_margin="20dp"
+                        android:text="127 g"
+                        android:textColor="@color/color_white"
+                        android:textSize="36sp" />
                 </RelativeLayout>
             </FrameLayout>
 

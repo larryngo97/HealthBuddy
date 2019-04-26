@@ -17,7 +17,7 @@
         android:layout_marginRight="0dp"
         tools:layout_editor_absoluteX="285dp"
         tools:layout_editor_absoluteY="16dp"
-        android:src="@drawable/gif_newsquat" />
+        android:src="@drawable/gif_squats" />
 
     <TextView
         android:id="@+id/gv_item_name"

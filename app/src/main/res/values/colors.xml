@@ -4,12 +4,14 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorBackground">#fcfcfc</color>
-    <color name="color_crimson">#990000</color>
+    <color name="color_crimson">#e60c3e</color>
+    <color name="color_gray">#808080</color>
     <color name="color_lightgray">#ededed</color>
     <color name="color_purple">#7c4dff</color>
     <color name="color_green">#00bfa5</color>
     <color name="color_navyblue">#23283a</color>
     <color name="color_pink">#fe104d</color>
+    <color name="color_blue">#0000FF</color>
     <color name="color_hotpink">#ff2190</color>
     <color name="color_darkgreen">#2e9938</color>
     <color name="color_magenta">#a25bd7</color>
@@ -21,6 +23,7 @@
     <color name="color_redorange">#ff6400</color>
     <color name="color_yellow">#FFFF00</color>
     <color name="color_neongreen">#39ff14</color>
+    <color name="color_black">#000000</color>
     <color name="color_black_transparent">#80000000</color>
     <color name="color_black_transparent2">#BF000000</color>
     <color name="color_lightblue_transparent">#6612c7e3</color>
