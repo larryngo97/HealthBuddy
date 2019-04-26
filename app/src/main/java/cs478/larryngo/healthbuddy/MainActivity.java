@@ -6,9 +6,9 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -17,6 +17,17 @@ public class MainActivity extends AppCompatActivity {
     protected static FragmentManager fm;
     BottomNavigationView botNavBar;
 
+    protected static String data_date;
+    protected static String data_firstName;
+    protected static String data_lastName;
+    protected static String data_occupation;
+    protected static String data_email;
+    protected static String data_password;
+    protected static int data_height_ft;
+    protected static int data_height_in;
+    protected static int data_weight;
+    protected static int data_caloriesLimit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +35,17 @@ public class MainActivity extends AppCompatActivity {
 
         //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+
+        data_date = "April 30th, 2019";
+        data_firstName = "Larry";
+        data_lastName = "Ngo";
+        data_email = "lngo4@uic.edu";
+        data_password = "thisisapassword";
+        data_height_ft = 5;
+        data_height_in = 2;
+        data_weight = 120;
+        data_caloriesLimit = 2000;
+        data_occupation = "Student";
 
         botNavBar = findViewById(R.id.navigation_bottom);
         botNavBar.setOnNavigationItemSelectedListener(navListener);
