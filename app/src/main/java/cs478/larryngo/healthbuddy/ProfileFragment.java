@@ -35,15 +35,6 @@ public class ProfileFragment extends Fragment {
         ImageView iv_profilePicture = (ImageView) view.findViewById(R.id.profile_picture);
         iv_profilePicture.setImageResource(R.drawable.ic_profile_icon);
 
-        ImageView iv_settings = (ImageView) view.findViewById(R.id.profile_icon_settings);
-        iv_settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = new SettingsFragment();
-                MainActivity.fm.beginTransaction().setCustomAnimations(R.anim.slide_in_up, R.anim.slide_out_down, R.anim.slide_in_down, R.anim.slide_out_up)
-                        .replace(R.id.fragment_container, fragment).addToBackStack(null).commit();
-            }
-        });
         return view;
     }
 

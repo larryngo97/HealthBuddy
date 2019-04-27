@@ -19,18 +19,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/profile_icon_settings"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_margin="10dp"
-                android:layout_gravity="end"
-                app:srcCompat="@drawable/ic_settings" />
-
             <de.hdodenhof.circleimageview.CircleImageView
                 xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_gravity="center"
                 android:id="@+id/profile_picture"
+                android:layout_marginTop="50dp"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
                 android:src="@drawable/ic_profile_icon"
@@ -71,7 +64,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/josefin_sans"
                 android:gravity="center"
-                android:text="April 25th, 2019"
+                android:text="April 30th, 2019"
                 android:textColor="@color/color_lightgray"
                 android:textSize="36sp" />
 
@@ -120,7 +113,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="4280 steps"
+                        android:text="7,512 steps"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
@@ -155,7 +148,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="2.14 mi"
+                        android:text="3.75 mi"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
@@ -190,7 +183,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="1 hr 23 mins"
+                        android:text="0 hr 15 mins"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
@@ -225,7 +218,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="253 kcal"
+                        android:text="153 kcal"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
@@ -277,7 +270,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="2,073 kcal"
+                        android:text="1,850 kcal"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>

@@ -73,12 +73,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/settings_button_name"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -125,12 +129,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/settings_button_email"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -177,12 +185,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/settings_button_password"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -240,12 +252,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/settings_button_occupation"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -292,12 +308,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/settings_button_height"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -344,12 +364,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+                    <Button
+                        android:id="@+id/settings_button_weight"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -396,12 +420,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <ImageView
+
+                    <Button
+                        android:id="@+id/settings_button_calories"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentRight="true"
-                        app:srcCompat="@drawable/ic_settings_edit" />
+                        android:background="@drawable/ic_settings_edit"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"/>
                 </RelativeLayout>
             </LinearLayout>
 

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,64 +15,161 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ProgressBar
-                android:id="@+id/nutrition_progressbar_meter"
-                style="?android:progressBarStyleHorizontal"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_below="@+id/nutrition_graph"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="53dp"
-                android:layout_marginLeft="53dp"
-                android:layout_marginTop="6dp"
-                android:progress="80"
-                android:progressDrawable="@drawable/progress_bar_circle"
-                android:rotation="-90" />
-
-            <TextView
-                android:id="@+id/nutrition_progressbar_percentage"
-                android:layout_width="107dp"
-                android:layout_height="67dp"
-                android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                android:layout_alignEnd="@+id/nutrition_progressbar_meter"
-                android:layout_alignRight="@+id/nutrition_progressbar_meter"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="21dp"
-                android:layout_marginRight="21dp"
-                android:fontFamily="sans-serif-condensed"
-                android:gravity="center"
-                android:text="0.0%"
-                android:textSize="32sp" />
-
-            <TextView
-                android:id="@+id/nutrition_progressbar_meter_subtitle"
-                android:layout_width="220dp"
-                android:layout_height="52dp"
-                android:layout_below="@+id/nutrition_progressbar_meter"
-                android:layout_marginStart="-47dp"
-                android:layout_marginLeft="-47dp"
-                android:layout_marginTop="-91dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp"
-                android:layout_toEndOf="@+id/nutrition_progressbar_meter"
-                android:layout_toRightOf="@+id/nutrition_progressbar_meter"
-                android:gravity="center_horizontal"
-                android:text="calories count"
-                android:textSize="16sp" />
-
-            <ImageView
-                android:id="@+id/nutrition_graph"
+            <RelativeLayout
+                android:id="@+id/nutrition_layout_progressbar"
                 android:layout_width="match_parent"
-                android:layout_height="238dp"
-                android:src="@drawable/nutrition_graph" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp">
+
+                <ProgressBar
+                    android:id="@+id/nutrition_progressbar_meter"
+                    style="?android:progressBarStyleHorizontal"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginLeft="14dp"
+                    android:layout_marginTop="6dp"
+                    android:progress="80"
+                    android:progressDrawable="@drawable/progress_bar_circle"
+                    android:rotation="-90" />
+
+                <TextView
+                    android:id="@+id/nutrition_progressbar_percentage"
+                    android:layout_width="130dp"
+                    android:layout_height="97dp"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_alignEnd="@+id/nutrition_progressbar_meter"
+                    android:layout_alignRight="@+id/nutrition_progressbar_meter"
+                    android:layout_marginTop="54dp"
+                    android:layout_marginEnd="36dp"
+                    android:layout_marginRight="36dp"
+                    android:fontFamily="@font/pavanam"
+                    android:gravity="center"
+                    android:text="0.0%"
+                    android:textColor="@color/color_black"
+                    android:textSize="32sp" />
+
+                <TextView
+                    android:id="@+id/nutrition_progressbar_meter_subtitle"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nutrition_progressbar_meter"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="-13dp"
+                    android:layout_marginEnd="0dp"
+                    android:fontFamily="@font/pavanam"
+                    android:gravity="center_horizontal"
+                    android:text="calories count"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:id="@+id/nutrition_progressbar_legend_icon_red"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
+                    app:srcCompat="@drawable/ic_circle_red" />
+
+                <TextView
+                    android:id="@+id/nutrition_progressbar_legend_text_red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_red"
+                    android:fontFamily="@font/pavanam"
+                    android:textSize="18sp"
+                    android:text="RED METER" />
+
+                <ImageView
+                    android:id="@+id/nutrition_progressbar_legend_icon_orange"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
+                    app:srcCompat="@drawable/ic_circle_orange" />
+
+                <TextView
+                    android:id="@+id/nutrition_progressbar_legend_text_orange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="75dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_orange"
+                    android:fontFamily="@font/pavanam"
+                    android:textSize="18sp"
+                    android:text="ORANGE METER" />
+
+                <ImageView
+                    android:id="@+id/nutrition_progressbar_legend_icon_yellow"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="125dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
+                    app:srcCompat="@drawable/ic_circle_yellow" />
+
+                <TextView
+                    android:id="@+id/nutrition_progressbar_legend_text_yellow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="125dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_yellow"
+                    android:fontFamily="@font/pavanam"
+                    android:textSize="18sp"
+                    android:text="YELLOW METER" />
+
+                <ImageView
+                    android:id="@+id/nutrition_progressbar_legend_icon_green"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="175dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
+                    app:srcCompat="@drawable/ic_circle_darkgreen" />
+
+                <TextView
+                    android:id="@+id/nutrition_progressbar_legend_text_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="175dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_green"
+                    android:fontFamily="@font/pavanam"
+                    android:textSize="18sp"
+                    android:text="GREEN METER" />
+
+            </RelativeLayout>
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/nutrition_graph"
+                android:background="@color/color_black_transparent"
+                android:layout_below="@id/nutrition_layout_progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+            </com.github.mikephil.charting.charts.BarChart>
 
 
             <Button
                 android:id="@+id/nutrition_button_add"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nutrition_progressbar_meter"
+                android:layout_below="@+id/nutrition_graph"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"

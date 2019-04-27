@@ -21,4 +21,9 @@
         android:icon="@drawable/ic_star_black_24dp"
         android:title="Favorites"/>
 
+    <item
+        android:id="@+id/nav_bot_settings"
+        android:icon="@drawable/ic_settings_black_24dp"
+        android:title="Settings"/>
+
 </menu>

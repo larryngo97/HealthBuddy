@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     protected static int data_height_ft;
     protected static int data_height_in;
     protected static int data_weight;
+    protected static int data_caloriesConsumed;
     protected static int data_caloriesLimit;
 
     @Override
@@ -44,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         data_height_ft = 5;
         data_height_in = 2;
         data_weight = 120;
+        data_caloriesConsumed = 1850;
         data_caloriesLimit = 2000;
         data_occupation = "Student";
 
@@ -77,6 +79,10 @@ public class MainActivity extends AppCompatActivity {
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                     case R.id.nav_bot_favorite:
+                        fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        break;
+                    case R.id.nav_bot_settings:
+                        fragment = new SettingsFragment();
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                 }
