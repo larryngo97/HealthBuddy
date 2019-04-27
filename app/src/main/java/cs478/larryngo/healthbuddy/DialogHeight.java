@@ -33,10 +33,10 @@ public class DialogHeight extends AppCompatDialogFragment {
                     case AlertDialog.BUTTON_POSITIVE:
                         int feet = Integer.parseInt(edit_feet.getText().toString());
                         int inch = Integer.parseInt(edit_inch.getText().toString());
-                        if(inch > 12)
+                        if(inch > 11)
                         {
-                            inch = 12;
-                            Toast.makeText(getContext(), "Set inches to 12 (Cannot be > 12)", Toast.LENGTH_SHORT).show();
+                            inch = 11;
+                            Toast.makeText(getContext(), "Set inches to 11 (Cannot be > 11)", Toast.LENGTH_SHORT).show();
                         }
 
                         MainActivity.data_height_ft = feet;

@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DialogCalories extends AppCompatDialogFragment {
 
@@ -28,6 +29,11 @@ public class DialogCalories extends AppCompatDialogFragment {
                 {
                     case AlertDialog.BUTTON_POSITIVE:
                         int calories = Integer.parseInt(edit_calories.getText().toString());
+                        if(calories < 1000)
+                        {
+                            calories = 1000;
+                            Toast.makeText(getContext(), "Calories cannot be lower than 1000!", Toast.LENGTH_SHORT).show();
+                        }
 
                         MainActivity.data_caloriesLimit = calories;
 
