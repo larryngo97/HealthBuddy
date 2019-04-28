@@ -53,14 +53,14 @@ public class NutritionFoodFragment extends Fragment {
     private int caloriesConsumed;
     private float caloriesLimit = MainActivity.data_caloriesLimit;
 
-    private final double RED_LOW = 50.0;
-    private final double RED_HIGH = 150.0;
+    private final double RED_LOW = 40.0;
+    private final double RED_HIGH = 160.0;
 
-    private final double ORANGE_LOW = 75.0;
-    private final double ORANGE_HIGH = 125.0;
+    private final double ORANGE_LOW = 60.0;
+    private final double ORANGE_HIGH = 140.0;
 
-    private final double YELLOW_LOW = 90.0;
-    private final double YELLOW_HIGH = 110.0;
+    private final double YELLOW_LOW = 80.0;
+    private final double YELLOW_HIGH = 120.0;
 
     private int[] barColors = new int[] {R.color.color_red, R.color.color_redorange, R.color.color_yellow, R.color.color_darkgreen};
     private int[] pieColors = new int[] {R.color.color_purple, R.color.color_magenta, R.color.color_lightgreen};
@@ -198,7 +198,7 @@ public class NutritionFoodFragment extends Fragment {
         xAxis.setValueFormatter(new MyXAxisValueFormatter(chartDays));
         xAxis.setPosition(XAxis.XAxisPosition.BOTTOM);
         xAxis.setDrawGridLines(false);
-        xAxis.setTextSize(16f);
+        xAxis.setTextSize(12f);
         xAxis.setTextColor(Color.BLACK);
 
         yAxis.setAxisMinimum(0);
@@ -225,7 +225,7 @@ public class NutritionFoodFragment extends Fragment {
 
         BarDataSet set = new BarDataSet(entries, "Days");
 
-        set.setValueTextSize(16f);
+        set.setValueTextSize(14f);
         set.setValueTextColor(Color.BLACK);
         set.setColors(new int[] {getColor(sundayCalories, caloriesLimit), getColor(mondayCalories, caloriesLimit), getColor(tuesdayCalories, caloriesLimit),
                 getColor(wednesdayCalories, caloriesLimit), getColor(thursdayCalories, caloriesLimit), getColor(fridayCalories, caloriesLimit), getColor(saturdayCalories, caloriesLimit)}, context);

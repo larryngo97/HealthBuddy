@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
         data_weight = 120;
         data_caloriesConsumed = 1850;
         data_caloriesLimit = 2000;
-        data_calories_fats = 21;
-        data_calories_protein = 47;
-        data_calories_carbs = 127;
+        data_calories_fats = 56;
+        data_calories_protein = 40;
+        data_calories_carbs = 275;
         data_occupation = "Student";
 
         botNavBar = findViewById(R.id.navigation_bottom);

@@ -305,7 +305,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="21 g"
+                        android:text="56 g"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
@@ -340,7 +340,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="47 g"
+                        android:text="40 g"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
@@ -376,7 +376,7 @@
                         android:layout_alignParentRight="true"
                         android:layout_alignParentBottom="true"
                         android:layout_margin="20dp"
-                        android:text="127 g"
+                        android:text="275 g"
                         android:textColor="@color/color_white"
                         android:textSize="36sp" />
                 </RelativeLayout>
