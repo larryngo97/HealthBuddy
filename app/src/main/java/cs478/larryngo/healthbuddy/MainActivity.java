@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
     protected static int data_weight;
     protected static int data_caloriesConsumed;
     protected static int data_caloriesLimit;
+    protected static int data_calories_protein;
+    protected static int data_calories_carbs;
+    protected static int data_calories_fats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
         data_weight = 120;
         data_caloriesConsumed = 1850;
         data_caloriesLimit = 2000;
+        data_calories_fats = 21;
+        data_calories_protein = 47;
+        data_calories_carbs = 127;
         data_occupation = "Student";
 
         botNavBar = findViewById(R.id.navigation_bottom);

@@ -3,37 +3,95 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/color_white">
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <LinearLayout
+                android:id="@+id/nutrition_layout_date"
+                android:background="@drawable/gradient_pastel1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/ic_arrow_left_white"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/nutrition_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:textColor="@color/color_white"
+                    android:textSize="30sp"
+                    android:layout_weight="2"
+                    android:text="Tuesday, April 30th"/>
+
+                <ImageButton
+                    android:layout_width="75dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:background="@drawable/ic_arrow_right_white"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/nutrition_header_progressbar"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/header_ribbon">
+
+                <TextView
+                    android:id="@+id/nutrition_header_progressbar_text"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/pavanam"
+                    android:gravity="center_vertical"
+                    android:text="Calorie Count"
+                    android:textColor="@color/color_white"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
             <RelativeLayout
                 android:id="@+id/nutrition_layout_progressbar"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp">
+                android:layout_height="wrap_content">
 
-                <ProgressBar
+                <com.mikhaellopez.circularprogressbar.CircularProgressBar
                     android:id="@+id/nutrition_progressbar_meter"
-                    style="?android:progressBarStyleHorizontal"
-                    android:layout_width="200dp"
-                    android:layout_height="200dp"
+                    android:layout_width="175dp"
+                    android:layout_height="175dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginLeft="14dp"
-                    android:layout_marginTop="6dp"
-                    android:progress="80"
-                    android:progressDrawable="@drawable/progress_bar_circle"
-                    android:rotation="-90" />
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="25dp"
+                    app:cpb_background_progressbar_color="#FFCDD2"
+                    app:cpb_background_progressbar_width="5dp"
+                    app:cpb_progressbar_color="#F44336"
+                    app:cpb_progressbar_width="10dp" />
 
                 <TextView
                     android:id="@+id/nutrition_progressbar_percentage"
@@ -42,9 +100,9 @@
                     android:layout_alignTop="@+id/nutrition_progressbar_meter"
                     android:layout_alignEnd="@+id/nutrition_progressbar_meter"
                     android:layout_alignRight="@+id/nutrition_progressbar_meter"
-                    android:layout_marginTop="54dp"
-                    android:layout_marginEnd="36dp"
-                    android:layout_marginRight="36dp"
+                    android:layout_marginTop="43dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginRight="23dp"
                     android:fontFamily="@font/pavanam"
                     android:gravity="center"
                     android:text="0.0%"
@@ -53,160 +111,338 @@
 
                 <TextView
                     android:id="@+id/nutrition_progressbar_meter_subtitle"
-                    android:layout_width="220dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/nutrition_progressbar_meter"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="-13dp"
-                    android:layout_marginEnd="0dp"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
                     android:fontFamily="@font/pavanam"
                     android:gravity="center_horizontal"
+                    android:textColor="@color/color_black"
                     android:text="calories count"
                     android:textSize="24sp" />
+            </RelativeLayout>
 
-                <ImageView
-                    android:id="@+id/nutrition_progressbar_legend_icon_red"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
-                    app:srcCompat="@drawable/ic_circle_red" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="2dp"
+                android:background="@color/color_lightblue" />
 
-                <TextView
-                    android:id="@+id/nutrition_progressbar_legend_text_red"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_red"
-                    android:fontFamily="@font/pavanam"
-                    android:textSize="18sp"
-                    android:text="RED METER" />
-
-                <ImageView
-                    android:id="@+id/nutrition_progressbar_legend_icon_orange"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="75dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
-                    app:srcCompat="@drawable/ic_circle_orange" />
+            <RelativeLayout
+                android:id="@+id/nutrition_header_piechart"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/header_ribbon">
 
                 <TextView
-                    android:id="@+id/nutrition_progressbar_legend_text_orange"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="75dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_orange"
+                    android:id="@+id/nutrition_header_piechart_text"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
                     android:fontFamily="@font/pavanam"
-                    android:textSize="18sp"
-                    android:text="ORANGE METER" />
+                    android:gravity="center_vertical"
+                    android:text="Calorie Breakdown"
+                    android:textColor="@color/color_white"
+                    android:textSize="20sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nutrition_layout_piechart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nutrition_layout_progressbar">
+
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/nutrition_progressbar_piechart"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp">
+
+                </com.github.mikephil.charting.charts.PieChart>
 
                 <ImageView
-                    android:id="@+id/nutrition_progressbar_legend_icon_yellow"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="125dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
-                    app:srcCompat="@drawable/ic_circle_yellow" />
+                    android:id="@+id/nutrition_piechart_icon_fats"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_piechart"
+                    app:srcCompat="@drawable/ic_circle_purple" />
 
                 <TextView
-                    android:id="@+id/nutrition_progressbar_legend_text_yellow"
+                    android:id="@+id/nutrition_piechart_text_fats"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="125dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_yellow"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_toEndOf="@+id/nutrition_piechart_icon_fats"
                     android:fontFamily="@font/pavanam"
-                    android:textSize="18sp"
-                    android:text="YELLOW METER" />
+                    android:text="Fats: g | %"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp" />
 
                 <ImageView
-                    android:id="@+id/nutrition_progressbar_legend_icon_green"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="5dp"
-                    android:layout_marginTop="175dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_meter"
+                    android:id="@+id/nutrition_piechart_icon_protein"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="100dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_piechart"
+                    app:srcCompat="@drawable/ic_circle_magenta" />
+
+                <TextView
+                    android:id="@+id/nutrition_piechart_text_protein"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="100dp"
+                    android:layout_toEndOf="@+id/nutrition_piechart_icon_protein"
+                    android:fontFamily="@font/pavanam"
+                    android:text="Protein: g | %"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/nutrition_piechart_icon_carbs"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="150dp"
+                    android:layout_toEndOf="@+id/nutrition_progressbar_piechart"
                     app:srcCompat="@drawable/ic_circle_darkgreen" />
 
                 <TextView
-                    android:id="@+id/nutrition_progressbar_legend_text_green"
+                    android:id="@+id/nutrition_piechart_text_carbs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignTop="@+id/nutrition_progressbar_meter"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="175dp"
-                    android:layout_toEndOf="@+id/nutrition_progressbar_legend_icon_green"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_toEndOf="@+id/nutrition_piechart_icon_carbs"
                     android:fontFamily="@font/pavanam"
-                    android:textSize="18sp"
-                    android:text="GREEN METER" />
+                    android:text="Carbs: g | %"
+                    android:textColor="@color/color_black"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="2dp"
+                android:background="@color/color_lightblue" />
+
+            <RelativeLayout
+                android:id="@+id/nutrition_header_barchart"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/header_ribbon">
+
+                <TextView
+                    android:id="@+id/nutrition_header_barchart_text"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/pavanam"
+                    android:gravity="center_vertical"
+                    android:text="Weekly Calories"
+                    android:textColor="@color/color_white"
+                    android:textSize="24sp" />
 
             </RelativeLayout>
 
             <com.github.mikephil.charting.charts.BarChart
                 android:id="@+id/nutrition_graph"
-                android:background="@color/color_black_transparent"
-                android:layout_below="@id/nutrition_layout_progressbar"
+                android:layout_below="@id/nutrition_layout_piechart"
                 android:layout_width="match_parent"
-                android:layout_height="400dp">
+                android:layout_height="200dp">
 
             </com.github.mikephil.charting.charts.BarChart>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_height="2dp"
+                android:background="@color/color_lightblue" />
 
-            <Button
-                android:id="@+id/nutrition_button_add"
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:id="@+id/nutrition_header_food"
+                android:layout_marginTop="20dp"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/header_ribbon">
+
+                <TextView
+                    android:id="@+id/nutrition_header_food_text"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/pavanam"
+                    android:gravity="center_vertical"
+                    android:text="Food List"
+                    android:textColor="@color/color_white"
+                    android:textSize="24sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/nutrition_graph"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="163dp"
-                android:layout_marginLeft="163dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="160dp"
-                android:layout_marginRight="160dp"
-                android:background="@color/color_lightblue"
-                android:text=" Add Food" />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:gravity="center_vertical"
+                    android:text="Breakfast"
+                    android:layout_weight="9"
+                    android:textSize="24sp" />
+                
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/ic_add_black_24dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+
+            <ListView
+                android:id="@+id/nutrition_breakfast_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
 
             <View
                 android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_height="2dp"
-                android:layout_below="@+id/nutrition_button_add"
-                android:background="@color/color_darkgreen">
+                android:background="@color/color_lightblue" />
 
-            </View>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:gravity="center_vertical"
+                    android:text="Lunch"
+                    android:layout_weight="9"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/ic_add_black_24dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/nutrition_lunch_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
 
             <View
-                android:layout_width="2dp"
-                android:layout_height="370dp"
-                android:layout_below="@+id/nutrition_button_add"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="202dp"
-                android:layout_marginLeft="202dp"
-
-                android:layout_marginEnd="207dp"
-                android:layout_marginRight="207dp"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginBottom="10dp"
-                android:background="@color/color_darkgreen"></View>
+                android:layout_height="2dp"
+                android:background="@color/color_lightblue" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/josefin_sans"
+                    android:gravity="center_vertical"
+                    android:text="Dinner"
+                    android:layout_weight="9"
+                    android:textSize="24sp" />
+
+                <ImageButton
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginEnd="20dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:background="@drawable/ic_add_black_24dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/nutrition_dinner_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="75dp"
+                android:layout_height="2dp"
+                android:background="@color/color_lightblue" />
 
 
-        </RelativeLayout>
+
+        </LinearLayout>
     </ScrollView>
 </android.support.design.widget.CoordinatorLayout>
