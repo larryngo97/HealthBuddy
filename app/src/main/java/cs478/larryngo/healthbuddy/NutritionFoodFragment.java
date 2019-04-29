@@ -141,7 +141,7 @@ public class NutritionFoodFragment extends Fragment {
         int protein = MainActivity.data_calories_protein;
         int carbs = MainActivity.data_calories_carbs;
 
-        //pc_meter.setUsePercentValues(true);
+        pc_meter.setUsePercentValues(true);
         pc_meter.getDescription().setEnabled(false);
         pc_meter.getLegend().setEnabled(false);
         pc_meter.setExtraOffsets(5, 10, 5, 5);
@@ -153,7 +153,7 @@ public class NutritionFoodFragment extends Fragment {
         pc_meter.setDrawCenterText(true);
         pc_meter.setCenterTextSize(14f);
         pc_meter.setCenterTextTypeface(Typeface.MONOSPACE);
-        pc_meter.setCenterText("Calories in grams");
+        pc_meter.setCenterText("Calories %");
         pc_meter.animateY(1000, Easing.EaseInOutCubic);
 
         ArrayList<PieEntry> yValues = new ArrayList<>();
@@ -171,6 +171,7 @@ public class NutritionFoodFragment extends Fragment {
         data.setValueTextColor(ContextCompat.getColor(getContext(), R.color.color_white));
         pc_meter.setData(data);
 
+        /* CALORIES IN PERCENTAGE
         float calorieTotal = fats + protein + carbs;
         String fatPercentage = String.format(Locale.US, "%.1f", fats / calorieTotal * 100);
         String proteinPercentage = String.format(Locale.US, "%.1f", protein / calorieTotal * 100);
@@ -178,6 +179,11 @@ public class NutritionFoodFragment extends Fragment {
         pc_label_fats.setText("Fats: " + fatPercentage + "%");
         pc_label_protein.setText("Protein: " + proteinPercentage + "%");
         pc_label_carbs.setText("Carbs: " + carbsPercentage + "%");
+        */
+
+        pc_label_fats.setText("Fats: " + fats + "g\n(" + (fats*9) + " kcal)");
+        pc_label_protein.setText("Protein: " + protein + "g\n(" + (protein*4) + " kcal)");
+        pc_label_carbs.setText("Carbs: " + carbs + "g\n(" + (carbs*4) + " kcal)");
 
 
     }
