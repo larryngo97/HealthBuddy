@@ -153,7 +153,7 @@ public class NutritionFoodFragment extends Fragment {
         pc_meter.setDrawCenterText(true);
         pc_meter.setCenterTextSize(14f);
         pc_meter.setCenterTextTypeface(Typeface.MONOSPACE);
-        //pc_meter.setCenterText("Calorie Breakdown");
+        pc_meter.setCenterText("Calories in grams");
         pc_meter.animateY(1000, Easing.EaseInOutCubic);
 
         ArrayList<PieEntry> yValues = new ArrayList<>();
@@ -240,9 +240,8 @@ public class NutritionFoodFragment extends Fragment {
 
     public void setNewMeter(int random)
     {
-        // calories set to 371 to stay consistent with calorie breakdown below // for demo purpose
-        caloriesConsumed = 371;//MainActivity.data_caloriesConsumed;
-        if(random == 1) // After first initial 371 calories, a click will randomize caloriesConsumed
+        caloriesConsumed = MainActivity.data_caloriesConsumed;
+        if(random == 1)
         {
             Random rand = new Random();
             caloriesConsumed = rand.nextInt((int)caloriesLimit * 2);
