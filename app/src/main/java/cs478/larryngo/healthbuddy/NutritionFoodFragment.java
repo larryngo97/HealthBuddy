@@ -137,9 +137,12 @@ public class NutritionFoodFragment extends Fragment {
 
     public void pieSetData()
     {
+
         int fats = MainActivity.data_calories_fats;
         int protein = MainActivity.data_calories_protein;
         int carbs = MainActivity.data_calories_carbs;
+
+
 
         pc_meter.setUsePercentValues(true);
         pc_meter.getDescription().setEnabled(false);
@@ -181,9 +184,9 @@ public class NutritionFoodFragment extends Fragment {
         pc_label_carbs.setText("Carbs: " + carbsPercentage + "%");
         */
 
-        pc_label_fats.setText("Fats: " + fats + "g\n(" + (fats*9) + " kcal)");
-        pc_label_protein.setText("Protein: " + protein + "g\n(" + (protein*4) + " kcal)");
-        pc_label_carbs.setText("Carbs: " + carbs + "g\n(" + (carbs*4) + " kcal)");
+        pc_label_fats.setText("Fats: " + fats + "g\n(~" + (fats*9) + " kcal)");
+        pc_label_protein.setText("Protein: " + protein + "g\n(~" + (protein*4) + " kcal)");
+        pc_label_carbs.setText("Carbs: " + carbs + "g\n(~" + (carbs*4) + " kcal)");
 
 
     }
