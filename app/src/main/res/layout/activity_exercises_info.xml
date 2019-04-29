@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -9,8 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
         tools:ignore="RtlCompat">
 
         <RelativeLayout
@@ -22,7 +26,10 @@
                 android:id="@+id/exercises_info_header"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
+                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
                 android:background="@color/color_lightgray"
                 android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
@@ -114,12 +121,18 @@
                 android:textColor="@color/color_white"
                 android:textSize="24sp" />
 
-            <Switch
-                android:id="@+id/favoriteSwitch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Favorite"
-                tools:checked="false" />
+            <ToggleButton
+                android:id="@+id/toggleButton"
+                style="@style/toggleButton"
+                android:layout_width="57dp"
+                android:layout_height="37dp"
+                android:layout_alignBottom="@+id/exercises_info_header"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="right"
+                android:layout_marginStart="339dp"
+                android:layout_marginBottom="19dp"
+                android:background="@drawable/ic_toggle_bg" />
+
         </RelativeLayout>
     </ScrollView>
 
