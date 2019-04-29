@@ -240,8 +240,9 @@ public class NutritionFoodFragment extends Fragment {
 
     public void setNewMeter(int random)
     {
-        caloriesConsumed = MainActivity.data_caloriesConsumed;
-        if(random == 1)
+        // calories set to 371 to stay consistent with calorie breakdown below // for demo purpose
+        caloriesConsumed = 371;//MainActivity.data_caloriesConsumed;
+        if(random == 1) // After first initial 371 calories, a click will randomize caloriesConsumed
         {
             Random rand = new Random();
             caloriesConsumed = rand.nextInt((int)caloriesLimit * 2);
