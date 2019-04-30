@@ -2,10 +2,25 @@
 
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FavoritesFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/gradient_pastel4"
+        android:orientation="horizontal">
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
@@ -18,5 +33,38 @@
         android:fontFamily="@font/pavanam"
         android:text="Favorites "
         android:textSize="36sp" />
+
+
+    <TextView
+        android:id="@+id/gv_item_name"
+        android:layout_width="256dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:text="Squats"
+        android:textColor="@color/color_black"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gv_item_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="86dp"
+        android:layout_marginEnd="0dp"
+        android:src="@drawable/gif_squats" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/gv_item_image"
+        android:layout_marginTop="-150dp"
+        android:background="@color/color_lightblue_transparent"></View>
 
 </RelativeLayout>
