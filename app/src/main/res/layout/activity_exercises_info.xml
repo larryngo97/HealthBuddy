@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,38 +9,46 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
         tools:ignore="RtlCompat">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/exercises_info_header"
-                android:background="@drawable/gradient_white"
+            <LinearLayout
+                android:id="@+id/exercises_info_appbar"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginTop="0dp"
-                android:fontFamily="@font/pavanam"
-                android:gravity="left|bottom"
-                android:textColor="@color/color_black"
-                android:text="EXERCISE_NAME"
-                android:textSize="36sp" />
+                android:layout_height="50dp"
+                android:gravity="end"
+                android:background="@drawable/gradient_red">
+
+                <TextView
+                    android:id="@+id/exercises_info_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_gravity="start|bottom"
+                    android:fontFamily="@font/pavanam"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_white"
+                    android:text="EXERCISE_NAME"
+                    android:textSize="36sp" />
+
+                <ToggleButton
+                    android:id="@+id/toggleButton"
+                    style="@style/toggleButton"
+                    android:layout_gravity="end|bottom"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/ic_toggle" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/exercises_info_difficulty"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_below="@+id/exercises_info_header"
                 android:background="@drawable/gradient_orange"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
@@ -122,19 +130,7 @@
                 android:textColor="@color/color_white"
                 android:textSize="24sp" />
 
-            <ToggleButton
-                android:id="@+id/toggleButton"
-                style="@style/toggleButton"
-                android:layout_width="57dp"
-                android:layout_height="37dp"
-                android:layout_alignBottom="@+id/exercises_info_header"
-                android:layout_alignParentStart="true"
-                android:layout_gravity="right"
-                android:layout_marginStart="343dp"
-                android:layout_marginBottom="31dp"
-                android:background="@drawable/ic_toggle_bg" />
-
-        </RelativeLayout>
+        </LinearLayout>
     </ScrollView>
 
-</RelativeLayout>
+</LinearLayout>
