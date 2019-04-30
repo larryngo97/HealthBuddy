@@ -85,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                     case R.id.nav_bot_favorite:
+                        fragment = new FavoritesFragment();
                         fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                         break;
                     case R.id.nav_bot_settings:
