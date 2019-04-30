@@ -19,29 +19,31 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_lightgray">
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/exercises_info_header"
+                android:background="@drawable/gradient_white"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
-                android:background="@color/color_lightgray"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
+                android:fontFamily="@font/pavanam"
+                android:gravity="left|bottom"
+                android:textColor="@color/color_black"
                 android:text="EXERCISE_NAME"
                 android:textSize="36sp" />
 
             <TextView
                 android:id="@+id/exercises_info_difficulty"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="35dp"
                 android:layout_below="@+id/exercises_info_header"
-                android:background="@color/color_crimson"
+                android:background="@drawable/gradient_orange"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:gravity="center"
                 android:text="DIFFICULTY_LEVEL"
                 android:textColor="@color/color_white"
@@ -64,20 +66,19 @@
 
             <TextView
                 android:id="@+id/exercises_info_instructions"
-                android:layout_width="385dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/exercises_info_image"
+                android:layout_below="@+id/exercises_info_instructions_header"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="14dp"
-                android:layout_marginLeft="14dp"
-                android:layout_marginTop="55dp"
-                android:layout_marginEnd="11dp"
-                android:layout_marginRight="11dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="5dp"
                 android:gravity="start"
                 android:text="EXERCISES_INFO_INSTRUCTIONS"
+                android:textColor="@color/color_black"
                 android:textSize="18sp" />
 
             <Button
@@ -103,18 +104,18 @@
             <TextView
                 android:id="@+id/exercises_info_instructions_header"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="35dp"
                 android:layout_below="@+id/exercises_info_image"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginRight="0dp"
-                android:background="@color/color_lightblue"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/gradient_pastel1"
                 android:fontFamily="monospace"
                 android:gravity="center"
                 android:text="INSTRUCTIONS"
@@ -129,8 +130,8 @@
                 android:layout_alignBottom="@+id/exercises_info_header"
                 android:layout_alignParentStart="true"
                 android:layout_gravity="right"
-                android:layout_marginStart="339dp"
-                android:layout_marginBottom="19dp"
+                android:layout_marginStart="343dp"
+                android:layout_marginBottom="31dp"
                 android:background="@drawable/ic_toggle_bg" />
 
         </RelativeLayout>

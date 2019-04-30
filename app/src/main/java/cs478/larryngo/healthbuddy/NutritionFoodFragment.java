@@ -142,8 +142,6 @@ public class NutritionFoodFragment extends Fragment {
         int protein = MainActivity.data_calories_protein;
         int carbs = MainActivity.data_calories_carbs;
 
-
-
         pc_meter.setUsePercentValues(true);
         pc_meter.getDescription().setEnabled(false);
         pc_meter.getLegend().setEnabled(false);

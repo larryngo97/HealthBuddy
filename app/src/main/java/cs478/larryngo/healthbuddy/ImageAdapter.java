@@ -46,7 +46,7 @@ public class ImageAdapter extends BaseAdapter {
         View gridView = convertView;
         if (convertView == null) {
             LayoutInflater inflater = (LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE); //grabs inflate info
-            gridView = inflater.inflate(R.layout.gridview_layout, null); //inflates the grid
+            gridView = inflater.inflate(R.layout.gridview_exercises, null); //inflates the grid
 
         }
         ImageView iconView = gridView.findViewById(R.id.gv_item_image);
