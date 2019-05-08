@@ -20,18 +20,19 @@ Functionalities needed to be added:
   
 Screenshots:
 
-![alt text](http://i63.tinypic.com/juu71f.png)
-
 Homepage
 
-![alt text](http://i64.tinypic.com/6q9qwx.png)
+![alt text](http://i63.tinypic.com/juu71f.png)
 
 Nutrition Tab
 
-![alt text](http://i63.tinypic.com/2l8evsi.png)
+![alt text](http://i64.tinypic.com/6q9qwx.png)
 
 Viewing Exercises Tab
 
-![alt text](http://i64.tinypic.com/25ai0yu.png)
+![alt text](http://i63.tinypic.com/2l8evsi.png)
 
 Exercises with GIFS
+
+![alt text](http://i64.tinypic.com/25ai0yu.png)
+
