@@ -22,7 +22,7 @@ Screenshots:
 
 Homepage
 
-❮img src="images/Capture.png" ❯
+![](images/Capture.png)
 
 Nutrition Tab
 
