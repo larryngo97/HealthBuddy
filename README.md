@@ -26,15 +26,15 @@ Homepage
 
 Nutrition Tab
 
-❮img src="images/Capture2.png" ❯
-❮img src="images/Capture3.png" ❯
+![](images/Capture2.png)
+![](images/Capture3.png)
 
 Viewing Exercises Tab
 
-❮img src="images/Capture4.png" ❯
+![](images/Capture4.png)
 
 Exercises with GIFS
 
-❮img src="images/Capture5.png" ❯
-❮img src="images/Capture6.png" ❯
+![](images/Capture5.png)
+![](images/Capture6.png)
 
