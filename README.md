@@ -22,19 +22,19 @@ Screenshots:
 
 Homepage
 
-![](HealthBuddy/images/Capture.png)
+![](https://github.com/larryngo97/HealthBuddy/blob/master/images/Capture.PNG?raw=true)
 
 Nutrition Tab
 
-![](HealthBuddy/images/Capture2.png)
-![](HealthBuddy/images/Capture3.png)
+![](https://github.com/larryngo97/HealthBuddy/blob/master/images/Capture2.PNG?raw=true)
+![](https://github.com/larryngo97/HealthBuddy/blob/master/images/Capture3.PNG?raw=true)
 
 Viewing Exercises Tab
 
-![](HealthBuddy/images/Capture4.png)
+![](https://github.com/larryngo97/HealthBuddy/blob/master/images/Capture4.PNG?raw=true)
 
 Exercises with GIFS
 
-![](HealthBuddy/images/Capture5.png)
-![](HealthBuddy/images/Capture6.png)
+![](https://github.com/larryngo97/HealthBuddy/blob/master/images/Capture5.PNG?raw=true)
+![](https://github.com/larryngo97/HealthBuddy/blob/master/images/Capture6.PNG?raw=true)
 
