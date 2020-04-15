@@ -22,19 +22,19 @@ Screenshots:
 
 Homepage
 
-![](images/Capture.png)
+![](HealthBuddy/images/Capture.png)
 
 Nutrition Tab
 
-![](images/Capture2.png)
-![](images/Capture3.png)
+![](HealthBuddy/images/Capture2.png)
+![](HealthBuddy/images/Capture3.png)
 
 Viewing Exercises Tab
 
-![](images/Capture4.png)
+![](HealthBuddy/images/Capture4.png)
 
 Exercises with GIFS
 
-![](images/Capture5.png)
-![](images/Capture6.png)
+![](HealthBuddy/images/Capture5.png)
+![](HealthBuddy/images/Capture6.png)
 
