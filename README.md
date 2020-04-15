@@ -26,13 +26,15 @@ Homepage
 
 Nutrition Tab
 
-![alt text](http://i64.tinypic.com/6q9qwx.png)
+❮img src="images/Capture2.png" ❯
+❮img src="images/Capture3.png" ❯
 
 Viewing Exercises Tab
 
-![alt text](http://i63.tinypic.com/2l8evsi.png)
+❮img src="images/Capture4.png" ❯
 
 Exercises with GIFS
 
-![alt text](http://i64.tinypic.com/25ai0yu.png)
+❮img src="images/Capture5.png" ❯
+❮img src="images/Capture6.png" ❯
 
